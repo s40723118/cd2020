@@ -1,0 +1,235 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CD2020 協同產品設計實習</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>2020 Spring 協同產品設計實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">2020 Spring 協同產品設計實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='Grouping.html'>Grouping</a><ul class='dropdown'><li><a href='2a.html'>2a</a><li><a href='2b.html'>2b</a></li></ul><li><a href='Grading.html'>Grading</a><li class='has-children'><a href='KMOL2020.html'>KMOL2020</a><ul class='dropdown'><li><a href='Python.html'>Python</a><li><a href='Microcontroller.html'>Microcontroller</a><li><a href='MSYS2.html'>MSYS2</a><li><a href='Pyslvs-UI.html'>Pyslvs-UI</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li class='has-children'><a href='Mechanical Design.html'>Mechanical Design</a><ul class='dropdown'><li><a href='Topic1Author.html'>Topic1Author</a></li></li></ul></ul><li><a href='Assignments.html'>Assignments</a><li class='has-children'><a href='Reference.html'>Reference</a><ul class='dropdown'><li><a href='Dart.html'>Dart</a><li><a href='SQLite.html'>SQLite</a><li><a href='Fossil SCM.html'>Fossil SCM</a><li><a href='Jupyterlab.html'>Jupyterlab</a><li><a href='AI.html'>AI</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Pyslvs-UI << <a href='Pyslvs-UI.html'>Previous</a> <a href='Mechanical Design.html'>Next</a> >> Mechanical Design<br /><h1>Topics</h1>
+<blockquote>
+<p><span style="background-color: #ccffcc;">The products of the twenty - first century should be a sustainable service, designed to provide users with a quality of life experience.</span></p>
+<p><span style="background-color: #ccffcc;">二十一世紀的產品應該是一種永續服務, 旨在為用戶提供優質的生活體驗.</span></p>
+<p><span style="background-color: #ccffcc;">KMOLab</span></p>
+</blockquote>
+<h4>Topic 0: From Digital to Industrial + Engineering Product Design Collaboration</h4>
+<p>Login to your gm email account and download</p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/open?id=1YHQwYduSMisiJQS-Jr_HhJghzIqP_SBc">DigitalProductCollaboration.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1KRwEcU7Vn65xL6twStG_EWaTKz1Ag8PG/view?usp=sharing">IndustrialAndEngineeringProductDesignCollaboration.pdf</a></p>
+<p>Can we create an english-english vocabulary collection service?</p>
+<p style="padding-left: 30px;"><a href="https://www.autoitscript.com/forum/files/file/419-dictionary_bigdb/">https://www.autoitscript.com/forum/files/file/419-dictionary_bigdb/</a></p>
+<h4>Topic 1: Mechanical Design Process</h4>
+<p>Login to your gm email account and download <a href="https://drive.google.com/file/d/13THamnfayiRT4Wa9KzmjXQSP4ZW2jIej/view?usp=sharing">MechanicalDesignProcess.pdf</a>.</p>
+<p style="padding-left: 30px;">(Can we build online tools to facilitate these processes?)</p>
+<p style="padding-left: 30px;">Successful Design</p>
+<p style="padding-left: 30px;">Building the Design</p>
+<p style="padding-left: 30px;">Structural Considerations</p>
+<p style="padding-left: 30px;">Materials and Processes</p>
+<h4>Topic 2: Mechatronic System Design</h4>
+<p>Login to your gm email account and download <a href="https://drive.google.com/file/d/1KRb8vX_LB_3hkLwK1z1LOP8wl_StIZOR/view?usp=sharing">MSModelingAndTFApproaches.pdf</a>.</p>
+<p style="padding-left: 30px;"><span>(Can we build online tools to facilitate these processes?)</span></p>
+<p style="padding-left: 30px;">Mechatronic Systems</p>
+<p style="padding-left: 30px;">Mathematical Modeling</p>
+<p style="padding-left: 30px;">Transfer Function Approaches</p>
+<p>Login to your gm email account and download <a href="https://drive.google.com/file/d/1y0QH6vI8uMymK9JI35EShVFS40Q8uwwq/view?usp=sharing">MechatronicDesignCases.pdf</a>.</p>
+<p style="padding-left: 30px;">DC Motor Velocity and Position Control</p>
+<p style="padding-left: 30px;">Balancing Robot Control</p>
+<p style="padding-left: 30px;">Magnetic Levitation System</p>
+<h4>Topic 3: Mechatronic Future and Challenges</h4>
+<p><span>Login to your gm email account and download <a href="https://drive.google.com/file/d/118Vho5ECQfQ1XK_hnlptpCVdNgQ00HuZ/view?usp=sharing">MechaFutureAndChallenges.pdf</a>.</span></p>
+<p style="padding-left: 30px;">Mechatronic Futures</p>
+<p style="padding-left: 30px;">Mechatronics Disrupted</p>
+<p style="padding-left: 30px;">Challenges in Mechatronics</p>
+<p><span>Login to your gm email account and download <a href="https://drive.google.com/file/d/1AFADmyNrwprE7AesaFAecZZquIfzbLw-/view?usp=sharing">MechaEducFutureNeed.pdf</a>.</span></p>
+<p style="padding-left: 30px;">Education to meet future need</p>
+<p>Login to your gm email account and <a href="https://drive.google.com/drive/folders/1h2bc9HqF3yhB3BwZwJD_vPUdOPGroQtv?usp=sharing">download all reference files</a>.</p><br />Pyslvs-UI << <a href='Pyslvs-UI.html'>Previous</a> <a href='Mechanical Design.html'>Next</a> >> Mechanical Design</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

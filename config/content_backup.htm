@@ -1,0 +1,783 @@
+<h1>About</h1>
+<p>Course Title: Collaborative Product Design and  Practice (short name: CD)</p>
+<p>Repository: <a href="https://github.com/mdecourse/cd2020">https://github.com/mdecourse/cd2020</a></p>
+<p>Project: <a href="https://github.com/mdecourse/cd2020/projects/1">https://github.com/mdecourse/cd2020/projects/1</a></p>
+<p>Gitter: <a href="https://gitter.im/mdecourse/cd2020">https://gitter.im/mdecourse/cd2020</a> </p>
+<p>Web site: <a href="https://mde.tw/cd2020">https://mde.tw/cd2020</a> </p>
+<p>Blog: <a href="https://mde.tw/cd2020/blog">https://mde.tw/cd2020/blog</a> </p>
+<p>Presentation: <a href="https://mde.tw/cd2020/reveal">https://mde.tw/cd2020/reveal</a> </p>
+<hr/>
+<h4><span><a href="https://drive.google.com/open?id=1cZFSsLEoGOBYojzKzFEf4YH2l--pbS-9"></a></span>電腦輔助設計室與協同設計室行事曆</h4>
+<p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei">全頁檢視</a></p>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
+<p>請登入 gm 電子郵箱後, 填寫下列表單:</p>
+<p style="padding-left: 30px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfetOEX-l_KYPUZuUuPft5IC1t-FttkoX1s_Nh9FRxYZXKYWA/viewform?usp=sf_link">選課學員基本資料</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdSvo89BOMfQOxFflhx-b3eDa_kYP0lUkTLfotdr1AEyQbItw/viewform?usp=sf_link">課程回饋表單</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeBw2zOZZvLzREkonbtrEeMLixmSVqsxGwq7LZekra2lcBXgQ/viewform?usp=sf_link">協同產品設計實習自評與互評表單</a></p>
+<h2>Grouping</h2>
+<h4>亂數分組:</h4>
+<p style="padding-left: 30px;">Base upon the Dart + Python random grouping system and the <a href="https://github.com/mdecourse/wcms-scrum1">https://github.com/mdecourse/wcms-scrum1</a> (<a href="https://wcms-scrum1.herokuapp.com/gear_index">https://wcms-scrum1.herokuapp.com/gear_index</a>), we may be able to create more collaborative product design service.</p>
+<p style="padding-left: 30px;">Flask Python programs can be deployed at Heroku or self install Ubuntu server. ( <a href="https://mdecp2018.github.io/finalproject-bgx/content/Heroku%20%E8%A8%AD%E5%AE%9A.html">https://mdecp2018.github.io/finalproject-bgx/content/Heroku%20%E8%A8%AD%E5%AE%9A.html</a>) </p>
+<p><a href="https://mde.tw/cd2020/downloads/2020spring_cd_2a_list.txt">https://mde.tw/cd2020/downloads/2020spring_cd_2a_list.txt</a> was taken from <a href="https://osa.nfu.edu.tw/">https://osa.nfu.edu.tw/</a> on Feb. 19, 2020.</p>
+<p>The most updated list: <a href="http://s1.mde.nfu.edu.tw:8000/?semester=1082&amp;courseno=0767">http://s1.mde.nfu.edu.tw:8000/?semester=1082&amp;courseno=0767</a> </p>
+<p>semester: 1082</p>
+<p>courseno for 2a:  0767</p>
+<p>courseno for 2b: 0780</p>
+<p>Under https protocol use port 7443, for http use port 8000.</p>
+<p>學員名單 URL: <input id="studListUrl" size="70" type="text" value="http://s1.mde.nfu.edu.tw:8000/?semester=1082&amp;courseno=0767 "/><br/> <input id="submit" type="submit" value="開始分組"/><br/> <textarea cols="80" id="output" rows="10"></textarea></p>
+<script src="https://mde.tw/cd2020/downloads/dart_ex/even_grouping/evenGrouping.js"></script>
+<p><a href="https://dartpad.github.io/embed-html.html?gh_owner=mdecourse&amp;gh_repo=cd2020&amp;gh_path=downloads/dart_ex/even_grouping&amp;theme=dark">Dart source code for random grouping</a></p>
+<h4>evenGrouping.dart:</h4>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import 'dart:html';
+ 
+  InputElement studListUrl = querySelector("#studListUrl");
+  String studUrl;
+  // 將 Label 改為 Textarea, 避免產生過程結果嵌入所在頁面
+  TextAreaElement output = querySelector("#output");
+ 
+main() {
+  querySelector("#submit").onClick.listen((e) =&gt; grouping());
+}
+ 
+grouping() {
+  output.innerHtml = "";
+ 
+  if (studListUrl.value != "") {
+    studUrl = studListUrl.value;
+  } else {
+    studUrl = 'https://mde.tw/group/downloads/2019fall_cp_1a_list.txt';
+  }
+ 
+  // 組序由 1 開始
+  int gth = 1;
+  // 迴圈序號變數
+  int i;
+  int j;
+  int total;
+  int inc;
+  // 每組學員暫存數列
+  var gpList = [];
+  // 全班分組數列
+  var group = [];
+  // 各組人數數列
+  var numList = [];
+  var courseTitle = 'cd2020';
+ 
+  HttpRequest.getString(studUrl).then((String resp) {
+    // 利用 trim() 去除字串最後的跳行符號, 之後再利用 split() 根據 \n 轉為數列
+    var studList = resp.trim().split("\n");
+    // 數列利用 shuffle() 方法以隨機方法弄亂順序
+    studList.shuffle();
+    total = studList.length;
+    output.text += "全班總計" + total.toString() + " 人\n";
+    numList = getNumList(studList.length);
+    inc = 0;
+    for (i in numList){
+      // 列印區隔符號
+      output.text += '=' * 20 + "\n";
+      output.text += "group $gth 有 " + i.toString() + " 人: \n";
+      gpList = [];
+      for (j = 0; j &lt; i; j++){
+        output.text += studList[j+inc] + "\n";
+        // 在各分組數列中加入將對應的學員學號
+        gpList.add(studList[j+inc]);
+      }
+      gth = gth + 1;
+      inc = inc + j;
+        //output.text += studList[j] + "\n";
+        // 逐步將各組暫存的分組數列加入全班分組數列中
+      gpList.sort();
+      group.add(gpList);
+    }
+    // 列出全班分組數列
+    output.text += group.toString() + "\n";
+    // 列出已經排序後的分組名單
+    output.text += '=' * 25 + "\n";
+    output.text += '以下為排序後的各組成員名單: \n';
+    gth = 1;
+    /*
+    404231
+    s4052
+    4062
+    s4072
+    4082
+    5072
+    5083
+    */
+    // 先列出純文字以 \n 跳行組員資料
+    for (i=0; i &lt; group.length; i++){
+      // 列印區隔符號
+      output.text += '=' * 20 + "\n";
+      output.text += "group $gth \n";
+      gpList = [];
+      for (j=0; j &lt; group[i].length; j++){
+        output.text += group[i][j] + "\n";
+      }
+      gth = gth + 1;
+    }
+    
+    gth = 1;
+    // 最後列出超文件以 &lt;br\&gt; 跳行組員資料, 包含倉儲與網站
+    for (i=0; i &lt; group.length; i++){
+      // 列印區隔符號
+      output.text += '\n' + '=' * 30 + "&lt;br \&gt;";
+      output.text += "group $gth &lt;br \&gt;";
+      gpList = [];
+      for (j=0; j &lt; group[i].length; j++){
+          if (group[i][j].startsWith('4052') || group[i][j].startsWith('4072')) {
+              output.text += "Repository: &lt;a href='https://github.com/s" + 
+                                      group[i][j] + "/" + courseTitle + "'&gt;" + group[i][j] + 
+                                      "&lt;/a&gt;" + " | Site: &lt;a href='https://s" + group[i][j] + 
+                                      ".github.io/" + courseTitle + "'&gt;" + group[i][j] + 
+                                      "&lt;/a&gt;&lt;br \&gt;";
+          }
+          else {
+              output.text += "Repository: &lt;a href='https://github.com/" + 
+                                      group[i][j] + "/" + courseTitle +"'&gt;" + group[i][j] + 
+                                      "&lt;/a&gt;" + " | Site: &lt;a href='https://" + group[i][j] + 
+                                      ".github.io/" + courseTitle + "'&gt;" + group[i][j] + 
+                                      "&lt;/a&gt;&lt;br \&gt;";
+          }
+      }
+      gth = gth + 1;
+    }
+  });
+}
+ 
+List getNumList(int total){
+  // total student number
+  // int total = 65;
+  // initial each group expect to be "eachGrp" number of people
+  int eachGrp = 10;
+  // may divide into "grpNum" number of group
+  int grpNum = total ~/ eachGrp;
+  // vacant list
+  var splits = [];
+  // find remainder when total number divid into "grpNum" number of group
+  int remainder = total % grpNum;
+  // number of people in one group by calculation
+  int calGrp = total ~/ grpNum;
+ 
+  for (int i = 0; i &lt; grpNum; i++) {
+    splits.add(calGrp);
+  }
+  //print(splits);
+ 
+  for (int i = 0; i &lt; remainder; i++) {
+    splits[i] += 1;
+  }
+  //print(splits);
+  return splits;
+ }</pre>
+<h4>index.html:</h4>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;h1&gt;亂數分組:&lt;/h1&gt;
+學員名單 URL: &lt;input type="text" id="studListUrl" size="50" value="https://mde.tw/wcm2020/downloads/2020spring_wcm_1a_list.txt"&gt;&lt;br /&gt;
+&lt;input type="submit" value="開始分組" id="submit"&gt;&lt;br /&gt;
+&lt;textarea id="output" cols="80" rows="10"&gt;&lt;/textarea&gt;</pre>
+<h4>style.css:</h4>
+<pre class="brush:css;auto-links:false;toolbar:false" contenteditable="false">body {
+  color: white;
+  font-size: 20px;
+}
+
+input, select, textarea {
+font-size: 100%;
+}</pre>
+<h4>get_student.py</h4>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, request 
+from flask_cors import CORS
+
+import requests
+import bs4
+import ssl
+
+'''
+https://s1.mde.nfu.edu.tw:7443/?semester=1082&amp;courseno=0767
+cd
+2a 1082/0767
+2b 1082/0780
+
+2a 1072/0777
+2b 1072/0790
+2a 1062/0788
+2a 1062/0802
+
+wcm
+1082/0744
+
+1072/0754
+1062/0765
+
+wcmj
+1082/2418
+'''
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route('/studlist')
+@app.route('/')
+def studlist():
+    semester = request.args.get('semester')
+    courseno = request.args.get('courseno')
+    if semester == None:
+        semester = '1082'
+    if courseno == None:
+        courseno = '0744'
+    
+    url = 'https://osa.nfu.edu.tw/query/studlist_ajax.php'
+    post_var = {'pselyr': semester, 'pseqno': courseno}
+
+    result = requests.post(url, data = post_var)
+
+    soup = bs4.BeautifulSoup(result.content, 'lxml')
+    table = soup.find('table', {'class': 'tbcls'})
+    data = []
+    rows = table.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele]) # Get rid of empty values
+    output = ""
+    for i in data[2:]:
+        #print(i[0])
+        output +=i[0] + "\n"
+    return output
+    #return  str(pselyr) + " + " +str(pseqno)
+
+# 即使在近端仍希望以 https 模式下執行
+context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+context.load_cert_chain('localhost.crt', 'localhost.key')
+
+# 取 flaskapp.py 中的 uwsgi 變數設定
+uwsgi = False
+if uwsgi:
+    # 表示程式在雲端執行
+    application = app
+else:
+    # 表示在近端執行, 以 python3 wsgi.py 執行
+    app.run(host='127.0.0.1', port=5443, debug=True, ssl_context=context)
+</pre>
+<h4>nginx sites-available/default settings:</h4>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">server {
+    listen 8000;
+    server_name s1.mde.nfu.edu.tw;
+    charset utf-8;
+    
+    listen 7443 ssl;
+ 
+    location /static {
+        alias /home/kmol2019/course_studlist/static/;
+    }
+ 
+    location / {
+        include uwsgi_params;
+        uwsgi_pass  127.0.0.1:8087;
+    }
+    
+    ssl_certificate /etc/stunnel/localhost.crt;
+    ssl_certificate_key /etc/stunnel/localhost.key;
+    ssl_session_timeout 5m;
+    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers "HIGH:!aNULL:!MD5 or HIGH:!aNULL:!MD5:!3DES";
+    ssl_prefer_server_ciphers on;
+    try_files $uri $uri/ =404;
+}</pre>
+<h4>uwsgi7.ini</h4>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">[uwsgi]
+socket = 127.0.0.1:8087
+uid = kmol2019
+gid = kmol2019
+plugins-dir = /usr/lib/uwsgi/plugins/
+plugin = python3
+master = true
+logto = /var/log/uwsgi/emperor.log
+logfile-chown = kmol2019:kmol2019
+processes = 4
+threads = 2
+chdir = /home/kmol2019/course_studlist
+wsgi-file = /home/kmol2019/course_studlist/get_student.py</pre>
+<h4>/etc/systemd/system/cmsimfly.service</h4>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">[Unit]
+Description=uWSGI to serve CMSimfly
+After=network.target
+
+[Service]
+User=kmol2019
+Group=kmol2019
+WorkingDirectory=/home/kmol2019/uwsgi_ini
+ExecStart=/usr/local/bin/uwsgi --emperor /home/kmol2019/uwsgi_ini
+
+[Install]
+WantedBy=multi-user.target</pre><h3>2a</h3>
+<p>group 1 <br/>Repository: <a href="https://github.com/s40723104/cd2020">40723104</a> | Site: <a href="https://s40723104.github.io/cd2020">40723104</a><br/>Repository: <a href="https://github.com/s40723107/cd2020">40723107</a> | Site: <a href="https://s40723107.github.io/cd2020">40723107</a><br/>Repository: <a href="https://github.com/s40723114/cd2020">40723114</a> | Site: <a href="https://s40723114.github.io/cd2020">40723114</a><br/>Repository: <a href="https://github.com/s40723115/cd2020">40723115</a> | Site: <a href="https://s40723115.github.io/cd2020">40723115</a><br/>Repository: <a href="https://github.com/s40723118/cd2020">40723118</a> | Site: <a href="https://s40723118.github.io/cd2020">40723118</a><br/>Repository: <a href="https://github.com/s40723122/cd2020">40723122</a> | Site: <a href="https://s40723122.github.io/cd2020">40723122</a><br/>Repository: <a href="https://github.com/s40723123/cd2020">40723123</a> | Site: <a href="https://s40723123.github.io/cd2020">40723123</a><br/>Repository: <a href="https://github.com/s40723140/cd2020">40723140</a> | Site: <a href="https://s40723140.github.io/cd2020">40723140</a><br/>Repository: <a href="https://github.com/s40723149/cd2020">40723149</a> | Site: <a href="https://s40723149.github.io/cd2020">40723149</a><br/>Repository: <a href="https://github.com/s40723151/cd2020">40723151</a> | Site: <a href="https://s40723151.github.io/cd2020">40723151</a><br/>Repository: <a href="https://github.com/s40723153/cd2020">40723153</a> | Site: <a href="https://s40723153.github.io/cd2020">40723153</a><br/>Repository: <a href="https://github.com/s40723154/cd2020">40723154</a> | Site: <a href="https://s40723154.github.io/cd2020">40723154</a><br/>Repository: <a href="https://github.com/s40723155/cd2020">40723155</a> | Site: <a href="https://s40723155.github.io/cd2020">40723155</a><br/> ==============================<br/>group 2 <br/>Repository: <a href="https://github.com/40623143/cd2020">40623143</a> | Site: <a href="https://40623143.github.io/cd2020">40623143</a><br/>Repository: <a href="https://github.com/s40723108/cd2020">40723108</a> | Site: <a href="https://s40723108.github.io/cd2020">40723108</a><br/>Repository: <a href="https://github.com/s40723127/cd2020">40723127</a> | Site: <a href="https://s40723127.github.io/cd2020">40723127</a><br/>Repository: <a href="https://github.com/s40723132/cd2020">40723132</a> | Site: <a href="https://s40723132.github.io/cd2020">40723132</a><br/>Repository: <a href="https://github.com/s40723133/cd2020">40723133</a> | Site: <a href="https://s40723133.github.io/cd2020">40723133</a><br/>Repository: <a href="https://github.com/s40723137/cd2020">40723137</a> | Site: <a href="https://s40723137.github.io/cd2020">40723137</a><br/>Repository: <a href="https://github.com/s40723141/cd2020">40723141</a> | Site: <a href="https://s40723141.github.io/cd2020">40723141</a><br/>Repository: <a href="https://github.com/s40723143/cd2020">40723143</a> | Site: <a href="https://s40723143.github.io/cd2020">40723143</a><br/>Repository: <a href="https://github.com/s40723144/cd2020">40723144</a> | Site: <a href="https://s40723144.github.io/cd2020">40723144</a><br/>Repository: <a href="https://github.com/s40723147/cd2020">40723147</a> | Site: <a href="https://s40723147.github.io/cd2020">40723147</a><br/>Repository: <a href="https://github.com/s40723148/cd2020">40723148</a> | Site: <a href="https://s40723148.github.io/cd2020">40723148</a><br/>Repository: <a href="https://github.com/s40723150/cd2020">40723150</a> | Site: <a href="https://s40723150.github.io/cd2020">40723150</a><br/> ==============================<br/>group 3 <br/>Repository: <a href="https://github.com/s40723103/cd2020">40723103</a> | Site: <a href="https://s40723103.github.io/cd2020">40723103</a><br/>Repository: <a href="https://github.com/s40723110/cd2020">40723110</a> | Site: <a href="https://s40723110.github.io/cd2020">40723110</a><br/>Repository: <a href="https://github.com/s40723112/cd2020">40723112</a> | Site: <a href="https://s40723112.github.io/cd2020">40723112</a><br/>Repository: <a href="https://github.com/s40723120/cd2020">40723120</a> | Site: <a href="https://s40723120.github.io/cd2020">40723120</a><br/>Repository: <a href="https://github.com/s40723125/cd2020">40723125</a> | Site: <a href="https://s40723125.github.io/cd2020">40723125</a><br/>Repository: <a href="https://github.com/s40723126/cd2020">40723126</a> | Site: <a href="https://s40723126.github.io/cd2020">40723126</a><br/>Repository: <a href="https://github.com/s40723128/cd2020">40723128</a> | Site: <a href="https://s40723128.github.io/cd2020">40723128</a><br/>Repository: <a href="https://github.com/s40723130/cd2020">40723130</a> | Site: <a href="https://s40723130.github.io/cd2020">40723130</a><br/>Repository: <a href="https://github.com/s40723139/cd2020">40723139</a> | Site: <a href="https://s40723139.github.io/cd2020">40723139</a><br/>Repository: <a href="https://github.com/s40723142/cd2020">40723142</a> | Site: <a href="https://s40723142.github.io/cd2020">40723142</a><br/>Repository: <a href="https://github.com/s40723145/cd2020">40723145</a> | Site: <a href="https://s40723145.github.io/cd2020">40723145</a><br/>Repository: <a href="https://github.com/s40723146/cd2020">40723146</a> | Site: <a href="https://s40723146.github.io/cd2020">40723146</a><br/> ==============================<br/>group 4 <br/>Repository: <a href="https://github.com/40423155/cd2020">40423155</a> | Site: <a href="https://40423155.github.io/cd2020">40423155</a><br/>Repository: <a href="https://github.com/s40723101/cd2020">40723101</a> | Site: <a href="https://s40723101.github.io/cd2020">40723101</a><br/>Repository: <a href="https://github.com/s40723102/cd2020">40723102</a> | Site: <a href="https://s40723102.github.io/cd2020">40723102</a><br/>Repository: <a href="https://github.com/s40723106/cd2020">40723106</a> | Site: <a href="https://s40723106.github.io/cd2020">40723106</a><br/>Repository: <a href="https://github.com/s40723111/cd2020">40723111</a> | Site: <a href="https://s40723111.github.io/cd2020">40723111</a><br/>Repository: <a href="https://github.com/s40723119/cd2020">40723119</a> | Site: <a href="https://s40723119.github.io/cd2020">40723119</a><br/>Repository: <a href="https://github.com/s40723121/cd2020">40723121</a> | Site: <a href="https://s40723121.github.io/cd2020">40723121</a><br/>Repository: <a href="https://github.com/s40723124/cd2020">40723124</a> | Site: <a href="https://s40723124.github.io/cd2020">40723124</a><br/>Repository: <a href="https://github.com/s40723134/cd2020">40723134</a> | Site: <a href="https://s40723134.github.io/cd2020">40723134</a><br/>Repository: <a href="https://github.com/s40723135/cd2020">40723135</a> | Site: <a href="https://s40723135.github.io/cd2020">40723135</a><br/>Repository: <a href="https://github.com/s40723136/cd2020">40723136</a> | Site: <a href="https://s40723136.github.io/cd2020">40723136</a><br/>Repository: <a href="https://github.com/s40723138/cd2020">40723138</a> | Site: <a href="https://s40723138.github.io/cd2020">40723138</a></p>
+<h3>2b</h3><h2>Grading</h2>
+<h4>Grading percentage:</h4>
+<p style="padding-left: 30px;">Self-evaluation (30%)</p>
+<p style="padding-left: 30px;">Peer Review (30%)</p>
+<p style="padding-left: 30px;">Teacher Grading (40%)</p>
+<h4>Grading content:</h4>
+<p style="padding-left: 30px;">Attendance, Github commits, website and blog maintenance, and note taking (40%)</p>
+<p style="padding-left: 30px;">Assignment 1 presentation (Youtube and Reveal.js) (10%)</p>
+<p style="padding-left: 30px;">Assignment 2 presentation (Youtube and Reveal.js) (10%)</p>
+<p style="padding-left: 30px;">Assignment 3 presentation (Youtube and Reveal.js) (10%)</p>
+<p style="padding-left: 30px;">Final Project (Youtube, Reveal.js and pdf report) (30%)</p>
+<p style="padding-left: 30px;"></p><h2>KMOL2020</h2>
+<h4>Create Portable Programming System for Windows 10:</h4>
+<p>PortableGit: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+<p>MSYS2: <a href="https://www.msys2.org/">https://www.msys2.org/</a></p>
+<p>Python 3.8.1: <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+<p style="padding-left: 30px;">CMSiMDE: <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a></p>
+<p style="padding-left: 60px;">Flask: <a href="https://github.com/pallets/flask">https://github.com/pallets/flask</a></p>
+<p style="padding-left: 60px;">lxml: <a href="https://github.com/lxml/lxml">https://github.com/lxml/lxml</a></p>
+<p style="padding-left: 60px;">bs4: <a href="https://pypi.org/project/beautifulsoup4/">https://pypi.org/project/beautifulsoup4/</a></p>
+<p style="padding-left: 60px;">markdown: <a href="https://github.com/Python-Markdown/markdown">https://github.com/Python-Markdown/markdown</a></p>
+<p style="padding-left: 60px;">flask-cors: <a href="https://github.com/corydolphin/flask-cors">https://github.com/corydolphin/flask-cors</a></p>
+<p style="padding-left: 60px;">Pelican: <a href="https://github.com/getpelican/pelican">https://github.com/getpelican/pelican</a></p>
+<p style="padding-left: 60px;">Reveal.js: <a href="https://github.com/hakimel/reveal.js/">https://github.com/hakimel/reveal.js/</a></p>
+<p style="padding-left: 30px;">Leo Editor: <a href="https://github.com/leo-editor/leo-editor">https://github.com/leo-editor/leo-editor</a></p>
+<p>SciTE: <a href="https://www.scintilla.org/SciTEDownload.html">https://www.scintilla.org/SciTEDownload.html</a></p>
+<p>Tiny C Compiler: <a href="https://github.com/TinyCC/tinycc">https://github.com/TinyCC/tinycc</a></p>
+<p>Fossil SCM: <a href="https://www.fossil-scm.org/">https://www.fossil-scm.org/</a></p>
+<p>Jupyterlab: <a href="https://github.com/jupyterlab/jupyterlab">https://github.com/jupyterlab/jupyterlab</a></p>
+<p>Flutter: <a href="https://github.com/flutter/flutter">https://github.com/flutter/flutter</a></p>
+<p>Visual Studio Code: <a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><h3>Python</h3>
+<p>Create a Portable Python:</p>
+<p>Install Python 3.8.1 without pip</p>
+<p><a href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH">PYTHONPATH</a></p>
+<p><a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a></p>
+<h4>start.bat</h4>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+set HomePath=%Disk%:\home_mdecourse
+set HomeDrive=%Disk%:\home_mdecourse
+set Home=%Disk%:\home_mdecourse
+set USERPROFILE=%Disk%:\home_mdecourse
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%Disk%:\py38\DLLs;%Disk%:\py38\Lib;%Disk%:\py38\Lib\site-packages;
+set PYTHONHOME=%Disk%:\py38
+
+REM for flutter
+set java_home=%Disk%:\java\jdk8u222-b10
+set ANDROID_SDK_home=%Disk%:\home_mdecourse
+set GRADLE_USER_home=%Disk%:\home_mdecourse
+set ANDROID_SDK_ROOT=%Disk%:\android\sdk
+set ANDROID_Home=%Disk%:\android\sdk\tools
+
+REM for putty
+set GIT_HOME=%CDisk%:\portablegit\bin\
+set GIT_SSH=%Disk%:\putty\plink.exe
+
+set path_python=%Disk%:\py38;%Disk%:\py38\Scripts;
+set path_msys2=%Disk%:\msys64\mingw64\bin;
+REM coreutils is for compiling fossil scm
+set path_coreutils=%Disk%:\coreutils-5.3.0\bin;%Disk%:\depends22_x64;
+set path_tcc=%Disk%:\tcc;
+set path_cmake=%Disk%:\cmake-3.10.1-win64-x64\bin;
+set path_nodejs=%Disk%:\nodejs;%Disk%:\nodejs\appdata\roaming\npm;
+set path_git=%Disk%:\portablegit\bin;
+set path_xming=%Disk%:\Xming;
+set path_latex=%Disk%:\Pandoc;%Disk%:\TinyTeX\bin\win32;
+set path_flutter=%Disk%:\java\jdk8u222-b10\bin;%Disk%:\flutter\bin;%Disk%:\Android\sdk;%Disk%:\Android\sdk\tools;%Disk%:\Android\sdk\tools\bin;%Disk%:\Android\sdk\platform-tools;%Disk%:\flutter\bin\cache\dart-sdk\bin;%Disk%:\vscode;
+set path_putty=%Disk%:\putty;
+
+path=%Disk%:;%path_python%;%path_msys2%;%path_tcc%;%path_git%;%path_cmake%;%path_coreutils%;%path_flutter%;%path_putty%;%path_latex%;%path%;
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\kmolScite\SciTE.exe
+start /MIN %Disk%:\kmolScite\SciTE.exe
+
+Exit</pre>
+<h3>Microcontroller</h3>
+<p>Login to your gm email and download </p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1mmmgiOFO-SVaj8LNID8gTWYgt6aKr6HN/view?usp=sharing">2019_ArduinoApplied.pdf</a></p>
+<p style="padding-left: 30px;">and </p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1vzffEBY1HK9yY1-t5MXO1TdeoGh2BHLq/view?usp=sharing">2018_BeginningRoboticsWithRaspberry.pdf</a></p>
+<h4>Arduino Simulator</h4>
+<p style="padding-left: 30px;"><a href="https://www.sites.google.com/site/unoardusim/">https://www.sites.google.com/site/unoardusim/</a></p>
+<h4>PIC Simulator Labortory</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/lcgamboa/picsimlab">https://github.com/lcgamboa/picsimlab</a></p>
+<p style="padding-left: 30px;"><a href="https://lcgamboa.github.io/">https://lcgamboa.github.io/</a></p>
+<p style="padding-left: 30px;"><a href="https://mplabxpress.microchip.com/mplabcloud/ide">https://mplabxpress.microchip.com/mplabcloud/ide</a></p>
+<p style="padding-left: 30px;">Login to your gm account and <a href="https://drive.google.com/drive/folders/1ucVrqPEzyidXDzM6H1K4U6uhzkvTKFSd?usp=sharing">download all Microchip related tools</a>.</p>
+<h4>Rasberry Pi</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/gavinlyonsrepo/RpiMotorLib">https://github.com/gavinlyonsrepo/RpiMotorLib</a></p>
+<h4>Python-exemplary</h4>
+<p style="padding-left: 30px;"><a href="http://www.python-exemplary.com/">http://www.python-exemplary.com/</a></p>
+<h3>MSYS2</h3>
+<p><a href="https://www.msys2.org/">https://www.msys2.org/</a></p>
+<p>Y:\py38\Lib\distutils\distutils.cfg</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">[build]
+compiler=mingw32
+
+[build_ext]
+compiler=mingw32</pre>
+<h4>Reference</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/KmolYuan/pyslvs/blob/master/platform/set_pycompiler.bat">https://github.com/KmolYuan/pyslvs/blob/master/platform/set_pycompiler.bat</a></p>
+<h3>Pyslvs-UI</h3>
+<h4>Compile and install python_solvespace library</h4>
+<p>Pyslvs-UI requires <a href="https://github.com/mdecourse/solvespace">https://github.com/mdecourse/solvespace</a> python_solvespace pyd dynamic library of the python branch.</p>
+<p style="padding-left: 30px;">git clone --recurse-submodules <a href="https://github.com/mdecourse/solvespace.git">https://github.com/mdecourse/solvespace.git</a> </p>
+<p style="padding-left: 30px;">cd solvespace</p>
+<p style="padding-left: 30px;">git checkout python</p>
+<p style="padding-left: 30px;">cd cython</p>
+<p style="padding-left: 30px;">python setup.py install</p>
+<h4>Compile and install Pyslvs-UI</h4>
+<p style="padding-left: 30px;">git clone --recurse-submodules <a href="https://github.com/mdecourse/pyslvs-UI.git">https://github.com/mdecourse/pyslvs-UI.git</a></p>
+<p style="padding-left: 30px;">cd pyslvs-UI</p>
+<p style="padding-left: 30px;">python -m pip install -r requirements.txt</p>
+<p style="padding-left: 30px;"><span>mingw32-make install</span></p>
+<p style="padding-left: 30px;"><span></span></p><h1>Topics</h1>
+<blockquote>
+<p><span style="background-color: #ccffcc;">The products of the twenty - first century should be a sustainable service, designed to provide users with a quality of life experience.</span></p>
+<p><span style="background-color: #ccffcc;">二十一世紀的產品應該是一種永續服務, 旨在為用戶提供優質的生活體驗.</span></p>
+<p><span style="background-color: #ccffcc;">KMOLab</span></p>
+</blockquote>
+<h4>Topic 0: From Digital to Industrial + Engineering Product Design Collaboration</h4>
+<p>Login to your gm email account and download</p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/open?id=1YHQwYduSMisiJQS-Jr_HhJghzIqP_SBc">DigitalProductCollaboration.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1KRwEcU7Vn65xL6twStG_EWaTKz1Ag8PG/view?usp=sharing">IndustrialAndEngineeringProductDesignCollaboration.pdf</a></p>
+<p>Can we create an english-english vocabulary collection service?</p>
+<p style="padding-left: 30px;"><a href="https://www.autoitscript.com/forum/files/file/419-dictionary_bigdb/">https://www.autoitscript.com/forum/files/file/419-dictionary_bigdb/</a></p>
+<h4>Topic 1: Mechanical Design Process</h4>
+<p>Login to your gm email account and download <a href="https://drive.google.com/file/d/13THamnfayiRT4Wa9KzmjXQSP4ZW2jIej/view?usp=sharing">MechanicalDesignProcess.pdf</a>.</p>
+<p style="padding-left: 30px;">(Can we build online tools to facilitate these processes?)</p>
+<p style="padding-left: 30px;">Successful Design</p>
+<p style="padding-left: 30px;">Building the Design</p>
+<p style="padding-left: 30px;">Structural Considerations</p>
+<p style="padding-left: 30px;">Materials and Processes</p>
+<h4>Topic 2: Mechatronic System Design</h4>
+<p>Login to your gm email account and download <a href="https://drive.google.com/file/d/1KRb8vX_LB_3hkLwK1z1LOP8wl_StIZOR/view?usp=sharing">MSModelingAndTFApproaches.pdf</a>.</p>
+<p style="padding-left: 30px;"><span>(Can we build online tools to facilitate these processes?)</span></p>
+<p style="padding-left: 30px;">Mechatronic Systems</p>
+<p style="padding-left: 30px;">Mathematical Modeling</p>
+<p style="padding-left: 30px;">Transfer Function Approaches</p>
+<p>Login to your gm email account and download <a href="https://drive.google.com/file/d/1y0QH6vI8uMymK9JI35EShVFS40Q8uwwq/view?usp=sharing">MechatronicDesignCases.pdf</a>.</p>
+<p style="padding-left: 30px;">DC Motor Velocity and Position Control</p>
+<p style="padding-left: 30px;">Balancing Robot Control</p>
+<p style="padding-left: 30px;">Magnetic Levitation System</p>
+<h4>Topic 3: Mechatronic Future and Challenges</h4>
+<p><span>Login to your gm email account and download <a href="https://drive.google.com/file/d/118Vho5ECQfQ1XK_hnlptpCVdNgQ00HuZ/view?usp=sharing">MechaFutureAndChallenges.pdf</a>.</span></p>
+<p style="padding-left: 30px;">Mechatronic Futures</p>
+<p style="padding-left: 30px;">Mechatronics Disrupted</p>
+<p style="padding-left: 30px;">Challenges in Mechatronics</p>
+<p><span>Login to your gm email account and download <a href="https://drive.google.com/file/d/1AFADmyNrwprE7AesaFAecZZquIfzbLw-/view?usp=sharing">MechaEducFutureNeed.pdf</a>.</span></p>
+<p style="padding-left: 30px;">Education to meet future need</p>
+<p>Login to your gm email account and <a href="https://drive.google.com/drive/folders/1h2bc9HqF3yhB3BwZwJD_vPUdOPGroQtv?usp=sharing">download all reference files</a>.</p><h2>Mechanical Design</h2>
+<p>Frontend - backend and design process</p>
+<p>Frontend Dart:</p>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">// 因為要使用超文件表單, 因此導入 html 程式庫
+import "dart:html";
+
+// 每一個 Dart 程式都從 main() 開始執行
+main() {
+  // 透過表單, 取得使用者輸入的溫度值, 語法為數字加上 C 或 F
+  InputElement tempInput = querySelector("#temp");
+  querySelector("#submit").onClick.listen((e) =&gt; pyconvert(tempInput.value));
+}
+
+pyconvert(String data) {
+  // 準備將轉換結果顯示在 output Label 區
+  LabelElement output = querySelector("#output");
+  // 將 data 送到遠端 python flask 程式區
+  request(data);
+} // pyconvert
+
+request(String asset) {
+  var response = document.querySelector('#response');
+  var url = 'http://localhost:5000/${asset}';
+
+  HttpRequest.getString(url, onProgress: (_) =&gt; response.text = 'Loading ...')
+      .then((resp) =&gt; response.setInnerHtml('&lt;pre&gt;${resp}&lt;/pre&gt;'))
+      .catchError((error) =&gt; response.text = 'ERROR !!!: ${error.toString()}');
+}
+
+/* 以下為 Python Flask 伺服器端的程式碼, 可以接受 Dart 前端送來的字串, 進行溫度轉換運算後, 將結果傳回
+import flask
+# 導入 flask_cors 模組中的 CORS
+# 目的在讓伺服器可以被遠端的 Dart 程式跨網域擷取資料
+from flask_cors import CORS
+
+app = flask.Flask(__name__)
+# 讓應用程式啟動後, 可以跨網域被截取資料
+CORS(app, support_credentials=False)
+global data
+
+@app.route('/', methods =['POST', 'GET'])
+def root():
+    if flask.request.method == 'POST': 
+        data = flask.request.form['data'] 
+        print(data)
+        resp = {"data": data}
+        output = flask.json.dumps(data)
+    else:
+        # 將 Python 中的 dictionary 資料透過 json 格式送出後
+        # 讓遠端的 Dart 程式可以擷取
+        data = {"a": 1, "b": data+"yen", "c": "字串"}
+        output = flask.json.dumps(data)
+    return output
+    
+@app.route('/&lt;name&gt;', methods=['POST', 'GET'])
+def convert(name):
+    #name[-1] 為字串最後一個字元
+    # name[:-1] 則為數字
+    if name[-1] is "F" or name[-1] is "f":
+        # 表示要將華氏溫度轉為攝氏
+        return FtoC(name[:-1])
+    else:
+        return CtoF(name[:-1])
+    
+#celsius = 5/9 ( fahrenheit − 32)
+#定義一個 celsius 轉 fahrenheit  函式
+def CtoF(c):
+    return "攝氏" + c + "度=華氏" + str(round(int(c)*9/5 + 32, 2)) + "度"
+
+#定義一個 celsius 轉 fahrenheit  函式
+def FtoC(f):
+    return "華氏" + f + "度=攝氏" + str(round((int(f) - 32)*5/9, 2)) + "度"
+
+
+if __name__ == '__main__':
+    # 內建的 Flask Web 啟動埠號為 5000
+    app.run()
+*/</pre>
+<p>Backend Python:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import flask
+# 導入 flask_cors 模組中的 CORS
+# 目的在讓伺服器可以被遠端的 Dart 程式跨網域擷取資料
+from flask_cors import CORS
+ 
+app = flask.Flask(__name__)
+# 讓應用程式啟動後, 可以跨網域被截取資料
+CORS(app, support_credentials=False)
+global data
+ 
+@app.route('/', methods =['POST', 'GET'])
+def root():
+    if flask.request.method == 'POST': 
+        data = flask.request.form['data'] 
+        print(data)
+        resp = {"data": data}
+        output = flask.json.dumps(data)
+    else:
+        # 將 Python 中的 dictionary 資料透過 json 格式送出後
+        # 讓遠端的 Dart 程式可以擷取
+        data = {"a": 1, "b": data+"yen", "c": "字串"}
+        output = flask.json.dumps(data)
+    return output
+     
+@app.route('/&lt;name&gt;', methods=['POST', 'GET'])
+def convert(name):
+    #name[-1] 為字串最後一個字元
+    # name[:-1] 則為數字
+    if name[-1] is "F" or name[-1] is "f":
+        # 表示要將華氏溫度轉為攝氏
+        return FtoC(name[:-1])
+    else:
+        return CtoF(name[:-1])
+     
+#celsius = 5/9 ( fahrenheit − 32)
+#定義一個 celsius 轉 fahrenheit  函式
+def CtoF(c):
+    return "攝氏" + c + "度=華氏" + str(round(int(c)*9/5 + 32, 2)) + "度"
+ 
+#定義一個 celsius 轉 fahrenheit  函式
+def FtoC(f):
+    return "華氏" + f + "度=攝氏" + str(round((int(f) - 32)*5/9, 2)) + "度"
+ 
+ 
+if __name__ == '__main__':
+    # 內建的 Flask Web 啟動埠號為 5000
+    app.run()</pre>
+<p>What can these programs do to the mechanical design process?</p>
+<p style="padding-left: 30px;"><a href="https://flutter.dev/">Flutter</a> mobile frontend and Python backend?</p>
+<p style="padding-left: 30px;">Learning Python?</p>
+<p style="padding-left: 60px;">Login to gm account and download</p>
+<p style="padding-left: 90px;"><a href="https://drive.google.com/file/d/17_LCSvwgtnIG8FnpezfUlEdbo3Y6G6CP/view?usp=sharing">2019_ABeginnersGuideToPython3Programming.pdf</a></p>
+<p style="padding-left: 90px;">and</p>
+<p style="padding-left: 90px;"><a href="https://drive.google.com/file/d/1z6v5j4TtFwBmo00URNpBBoLfQVmlTSZv/view?usp=sharing">2019_AdvancedGuideToPython3Programming.pdf</a></p>
+<p style="padding-left: 30px;">Learning Dart and Flutter?</p>
+<p style="padding-left: 60px;">Login to gm account and download </p>
+<p style="padding-left: 90px;"><a href="https://drive.google.com/file/d/1RyCFxXrh0skRAWafX7nyYFVHuMO68iTS/view?usp=sharing">2020_ QuickStartGuideToDartProgramming.pdf</a></p>
+<p style="padding-left: 90px;">and</p>
+<p style="padding-left: 90px;"><a href="https://drive.google.com/file/d/1RyCFxXrh0skRAWafX7nyYFVHuMO68iTS/view?usp=sharing">2019_BeginningAppDevelopmentWithFlutter.pdf</a></p>
+<p style="padding-left: 30px;"><a href="https://flutter.dev/">Flutter</a> mobile frontend, Python backend and <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> through <a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm">remote API</a>?</p>
+<p style="padding-left: 30px;"><a href="https://flutter.dev/">Flutter</a> mobile frontend, <a href="https://cython.org/">Cython</a> backend and <a href="https://github.com/solvespace/solvespace">Solvespace</a> through <a href="https://github.com/KmolYuan/solvespace/tree/python">Python Geometric Constranin Solver</a>?</p>
+<p style="padding-left: 60px;">Learning C++?</p>
+<p style="padding-left: 90px;">Login to gm account and download <a href="https://drive.google.com/file/d/1KZCqddCxs1CCK-thaYpM1ssuz3nMNn3t/view?usp=sharing">2018_Book_BeginningC17.pdf</a>.</p>
+<p style="padding-left: 90px;">Also check into <a href="https://www.msys2.org/">MSYS2</a> for reference.</p>
+<p style="padding-left: 30px;">Where can we save the data during a web/mobile frontend and backend based design process?</p>
+<p style="padding-left: 60px;">Login to gm account and download</p>
+<p style="padding-left: 90px;"><a href="https://drive.google.com/file/d/1u3PHIbGWz3r4bct_molJg8FODkS8tf02/view?usp=sharing">2019_BuildingRESTAPIsWithFlask.pdf</a> </p>
+<p style="padding-left: 90px;">and</p>
+<p style="padding-left: 90px;"><a href="https://drive.google.com/file/d/1REP4GKqo_RkLmPj2MqiuG-YR59TTqHPF/view?usp=sharing">2010_TheDefinitiveGuideToSQLite.pdf</a></p>
+<p style="padding-left: 60px;">Also check into <a href="https://github.com/chiamingyen/pygrouf">https://github.com/chiamingyen/pygrouf</a>, <a href="https://github.com/mdecourse/wcms-scrum1">https://github.com/mdecourse/wcms-scrum1</a> and <a href="https://wcms-scrum1.herokuapp.com/gear_index">https://wcms-scrum1.herokuapp.com/gear_index</a> for reference.</p>
+<h4>Recall application of <a href="https://www.google.com/search?q=pro%2Fweblink">Pro/Weblink</a></h4>
+<p>Take <a href="https://support.ptc.com/help/creo/creo_pma/usascii/index.html#page/fundamentals/fundamentals/fund_three_sub/About_Pro_Web_Link.html">Pro/Weblink</a> as an example. Javascript is used as the frontend working with a local host Pro/Engineer under the trusted Internet Explorer environment to enable programmable 3d mechanical Part and Assembly processes.</p>
+<p>Download <a href="https://drive.google.com/file/d/1CKB_lZ0ujiUC3zx2juRACUJaA8VCAHhW/view?usp=sharing">2002_ProEweblinkUserGuide.pdf</a></p>
+<h3>Topic1Author</h3>
+<p>Login to your gm account and download <a href="/get_page/ME%20Credentials/2019_DesigningElectronicProductEnclosures.pdf">2019_DesigningElectronicProductEnclosures.pdf</a> (where the topic1 material taken from)</p>
+<h4>Author’s Credentials</h4>
+<p>By listing some of the corporations where I have worked, this should provide some background on where my experience comes from.</p>
+<h4><a href="https://www.lincolnelectric.com/">Lincoln Electric Company</a></h4>
+<p>I started in the drafting room running blue prints in 1964. By taking night school classes in drafting, I soon was given the chance to apprentice as a tool and die designer where I got experience in the basic skills of designing jigs and fixtures. Lincoln Electric is "world famous" for their profit sharing program and work ethic. (I would later teach beginning drafting at Chabot College, California, in 1980).</p>
+<h4><a href="https://www.llnl.gov/">Lawrence Livermore National Laboratory</a></h4>
+<p>My first job after getting my master’s degree in mechanical engineering (from the University of Arizona, 1977) was in the Material Fabrication Group. Our mission to design and build a lathe capable of 0.000001 inch accuracy provided great experience. Additional experience in the design of experiments for laboratory programs proved invaluable for future work.</p>
+<h4><a href="https://www.intel.com/content/www/us/en/homepage.html">Intel Corporation</a></h4>
+<p>This is my first experience with the design of computer housings for "silicon valley." Intel was just expanding beyond chips and printed circuit board products, and they had plans to get into building computer systems. I’m on the cover of "Intel News" shown trying to measure fan noise of a prototype "tower computer" in 1982. I was very fortunate to experience the tremendous work ethic in the culture at Intel.</p>
+<h4><a href="https://en.wikipedia.org/wiki/Sytek_Inc">Sytek Corporation</a></h4>
+<p>This is my first design position where I had the responsibility of taking my own design thru all the stages of prototyping, tooling, testing, and manufacturing delivery. We installed our first CAD systems (CADAM) in 1986.</p>
+<p>This is the first company where I assumed some management responsibility and thus saw a more complete picture of where (mechanical) product design fits into a larger picture of the entire product delivery process.</p>
+<h4><a href="https://www.trimble.com/">Trimble Navigation Limited</a></h4>
+<p>This is my first designer position where I designed and documented with a CAD system (AutoCAD).</p>
+<p>My work here spanned nearly 25 years from 1988 thru 2013. We installed our first 3D CAD system (ProEngineer) in 1992. Trimble’s products (portable GPS instruments) are intended to work in outdoor environments, and their customers need these products to function under adverse conditions (shock, vibration, temperature extremes, rain).</p>
+<p>I spent my early years in the Marine Division, moved on to the Survey Division, and became manager of a Mechanical Engineering Group in 1995. While manager, I was responsible for budgeting, resourcing, prioritization, design, and documentation. I also served as (overall) project manager on a number of projects and thus experienced how the "mechanical piece" fits into the overall design of products.<br/> <br/>All of the above corporations had different accepted working processes for overall product design and different corporate cultures to operate in. It’s hoped that most of the words written here serve as a valuable contribution to the reader’s design process regardless of the corporate cultures they are in. The above work resume certainly spans<br/>a history of both how computers came to be used in the design process and how the industries evolved in their design processes. The design tools and products made for the marketplace will continue to evolve in the future, but we will still need basic mechanical design fundamentals to positively affect the overall product design process.</p>
+<h1>Assignments</h1>
+<h4>Assignment 1:</h4>
+<p><span style="background-color: #ffff00;">Due March 25, 2020</span> for class 2a and <span style="background-color: #ffff00;">March 26, 2020</span> for class 2b.</p>
+<p style="padding-left: 30px;">1. Describe how to do an efficient random grouping for this course or do the roll calling randomly?</p>
+<p style="padding-left: 30px;">2. Describe how to prepare a portable Python programming system for Windows 10 64bit system to allow one the maintain <a href="https://github.com/mdecourse/cmsimde">CMSiMDE</a> website, <a href="https://github.com/getpelican/pelican">Pelican blog</a> and <a href="https://github.com/hakimel/reveal.js/">Reveal.js</a> presentation on <a href="https://github.com/">Github</a>?</p>
+<p style="padding-left: 30px;">3. What do you need to know from <a href="http://www.coppeliarobotics.com/helpFiles/index.html">http://www.coppeliarobotics.com/helpFiles/index.html</a> to implement a four-wheeled robot?</p>
+<h4><span>Assignment 2:</span></h4>
+<p><span><span><span style="background-color: #ffff00;">Due April 22, 2020</span> for class 2a and <span style="background-color: #ffff00;">April 23, 2020</span> for class 2b.</span></span></p>
+<p style="padding-left: 30px;"><span><span>1. According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's  four wheeled robot.</span></span></p>
+<p style="padding-left: 30px;"><span>2. What do you need to know from <a href="https://cyberbotics.com/doc/guide/index">https://cyberbotics.com/doc/guide/index</a> <span> to implement a four-wheeled robot?</span></span></p>
+<h4>W9: Midterm presentation</h4>
+<h4><span>Assignment 3:</span></h4>
+<p><span><span>Due <span style="background-color: #ffff00;">May 27, 2020</span> for class 2a and <span style="background-color: #ffff00;">May 28, 2020</span> for class 2b.</span></span></p>
+<p style="padding-left: 30px;">According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> or <a href="https://cyberbotics.com/">Webots</a> and <a href="https://www.onshape.com/">Onshape</a>.</p>
+<h4>Final project:</h4>
+<p><span style="background-color: #ffff00;">Due June 24, 2020.</span></p>
+<p style="padding-left: 30px;">Realize your Mechatronic project and conclude with a presentation video and pdf report.</p><h1>Reference</h1><h2>Dart</h2>
+<p><a href="https://flutter.dev/docs/reference/tutorials">https://flutter.dev/docs/reference/tutorials</a></p>
+<p><a href="https://www.raywenderlich.com/4529993-getting-started-with-flutter">https://www.raywenderlich.com/4529993-getting-started-with-flutter</a></p>
+<p><a href="https://www.raywenderlich.com/flutter/">https://www.raywenderlich.com/flutter/</a></p>
+<p><a href="https://github.com/SpinlockLabs/github.dart">https://github.com/SpinlockLabs/github.dart</a></p>
+<p><a href="https://book.flutterchina.club/">https://book.flutterchina.club/</a></p>
+<p><a href="https://github.com/CarGuo/gsy_flutter_book">https://github.com/CarGuo/gsy_flutter_book</a></p>
+<p><a href="https://www.youtube.com/playlist?list=PLV2Iw811jLpWdAHToUqTuWYhYbjVfwS80">https://www.youtube.com/playlist?list=PLV2Iw811jLpWdAHToUqTuWYhYbjVfwS80</a></p>
+<p><a href="https://flutterbyexample.com/">https://flutterbyexample.com/</a></p><h2>SQLite</h2>
+<p>Build iOS Database Apps with Swift and SQLite (2016)</p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-2232-4">https://link.springer.com/book/10.1007/978-1-4842-2232-4</a></p>
+<p>Introducing SQLite for Mobile Developers (2015)</p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4842-1766-5">https://link.springer.com/book/10.1007/978-1-4842-1766-5</a></p>
+<p>The Definitive Guide to SQLite (2010)</p>
+<p style="padding-left: 30px;"><a href="https://link.springer.com/book/10.1007/978-1-4302-3226-1">https://link.springer.com/book/10.1007/978-1-4302-3226-1</a></p>
+<h4>SQLite3 and C:</h4>
+<h4 style="padding-left: 30px;">Compiled with <a href="https://www.msys2.org/">MSYS2</a> and <a href="https://packages.msys2.org/package/mingw-w64-x86_64-sqlite3">SQLite3</a>:</h4>
+<p style="padding-left: 30px;">gcc sqlite_ex.c -lsqlite3 -o sqlite_ex.exe</p>
+<p style="padding-left: 30px;">sqlite_ex.c query vocabulary from <a href="https://github.com/mdecourse/lookupdict/blob/master/webster_vocabulary.sqlite">https://github.com/mdecourse/lookupdict/blob/master/webster_vocabulary.sqlite</a></p>
+<h4><span>sqlite_ex.c source code:</span></h4>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;sqlite3.h&gt;
+#include &lt;stdio.h&gt;
+
+int callback(void *, int, char **, char **);
+
+int main(void) {
+    
+    sqlite3 *db;
+    char *err_msg = 0;
+    
+    int rc = sqlite3_open("webster_vocabulary.sqlite", &amp;db);
+    
+    if (rc != SQLITE_OK) {
+        
+        fprintf(stderr, "Cannot open database: %s\n", 
+                sqlite3_errmsg(db));
+        sqlite3_close(db);
+        
+        return 1;
+    }
+    
+    char *sql = "SELECT * FROM word where word='ABORT'";
+        
+    rc = sqlite3_exec(db, sql, callback, 0, &amp;err_msg);
+    
+    if (rc != SQLITE_OK ) {
+        
+        fprintf(stderr, "Failed to select data\n");
+        fprintf(stderr, "SQL error: %s\n", err_msg);
+
+        sqlite3_free(err_msg);
+        sqlite3_close(db);
+        
+        return 1;
+    } 
+    
+    sqlite3_close(db);
+    
+    return 0;
+}
+
+int callback(void *NotUsed, int argc, char **argv, 
+                    char **azColName) {
+    
+    NotUsed = 0;
+    
+    for (int i = 0; i &lt; argc; i++) {
+
+        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
+    }
+    
+    printf("\n");
+    
+    return 0;
+}</pre>
+<h4>SQLite3 and Python:</h4>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecourse/wcms-scrum1">https://github.com/mdecourse/wcms-scrum1</a></p>
+<h4>SQLite3 and Dart:</h4>
+<h4 style="padding-left: 30px;">dart:ffi only for mobile and desktop</h4>
+<p style="padding-left: 60px;">from <a href="https://www.sqlite.org/download.html">https://www.sqlite.org/download.html</a> download C source code as an amalgamation</p>
+<p style="padding-left: 60px;">use <a href="https://www.msys2.org/">MSYS2</a>:</p>
+<p style="padding-left: 90px;">gcc -shared sqlite3.c -o sqlite3.dll</p>
+<p style="padding-left: 60px;">to get sqlite3.dll</p>
+<p style="padding-left: 60px;">use git sparse-checkout from <a href="https://github.com/dart-lang/sdk">https://github.com/dart-lang/sdk</a> get</p>
+<p style="padding-left: 60px;"><a href="https://github.com/dart-lang/sdk/tree/master/samples/ffi/sqlite">https://github.com/dart-lang/sdk/tree/master/samples/ffi/sqlite</a></p>
+<p style="padding-left: 90px;">cd y:\tmp<br/>mkdir dart_sqlite<br/>cd dart_sqlite<br/>git init<br/>git config core.sparsecheckout true<br/>git remote add -f origin https://github.com/dart-lang/sdk.git<br/>echo samples/ffi/sqlite &gt;&gt; .git/info/sparse-checkout<br/>git pull origin master</p>
+<p style="padding-left: 60px;">cd y:\tmp\<span>samples\ffi\sqlite</span></p>
+<p style="padding-left: 60px;"><span>pub get</span></p>
+<p style="padding-left: 60px;"><span>copy sqlite3.dll and <a href="https://github.com/mdecourse/lookupdict/blob/master/webster_vocabulary.sqlite">webster_vocabulary.sqlite</a> into y:\tmp\<span>samples\ffi\sqlite\example</span></span></p>
+<h4 style="padding-left: 60px;"><span><span>use SciTE to execute main.dart:</span></span></h4>
+<pre class="brush:dart;auto-links:false;toolbar:false" contenteditable="false">import "../lib/sqlite.dart";
+
+void main() {
+  Database d = Database("webster_vocabulary.sqlite");
+
+  Result result = d.query("select * from word where word='ABORT';");
+  for (Row r in result) {
+    //String name = r.readColumnByIndex(1);
+    String word = r.readColumn("word");
+    String defn = r.readColumn("defn");
+    //print("$name $word $defn");
+    print("單字:$word 解說: $defn");
+  }
+  d.close();
+}
+</pre>
+<h4 style="padding-left: 30px;"><a href="https://pub.dev/packages/js">package:js</a> is for web</h4>
+<p style="padding-left: 60px;"><a href="https://github.com/simolus3/moor/blob/master/moor/lib/src/web/sql_js.dart">https://github.com/simolus3/moor/blob/master/moor/lib/src/web/sql_js.dart</a></p>
+<p>References:</p>
+<p style="padding-left: 30px;"><a href="https://pub.dev/packages/f_orm_m8_sqlite">https://pub.dev/packages/f_orm_m8_sqlite</a></p>
+<p style="padding-left: 30px;"></p>
+<p style="padding-left: 60px;"></p>
+<h2>Fossil SCM</h2>
+<p><a href="https://www.fossil-scm.org/">https://www.fossil-scm.org/</a></p>
+<h2>Jupyterlab</h2>
+<p><a href="https://github.com/jupyterlab/jupyterlab">https://github.com/jupyterlab/jupyterlab</a></p>
+<h2>AI</h2>
+<p><a href="https://artint.info/2e/html/ArtInt2e.html">https://artint.info/2e/html/ArtInt2e.html</a></p>
+<p><a href="https://github.com/SullyChen/Autopilot-TensorFlow">https://github.com/SullyChen/Autopilot-TensorFlow</a></p>
+<p><a href="https://towardsdatascience.com/how-a-high-school-junior-made-a-self-driving-car-705fa9b6e860">https://towardsdatascience.com/how-a-high-school-junior-made-a-self-driving-car-705fa9b6e860</a></p>
+<p><a href="https://github.com/UvinduW/RCAutopilot">https://github.com/UvinduW/RCAutopilot</a></p>
+<p></p>
