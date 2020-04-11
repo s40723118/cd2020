@@ -764,8 +764,10 @@ void main() {
 <h1>每週進度</h1>
 <h2>w2</h2>
 <p><em><strong>python 3.8.2</strong></em></p>
-<p><img alt="" height="405" src="/images/2020-04-06_21-18-59.png" width="720"/></p><h2>w3</h2>
+<p><img alt="" height="405" src="/images/2020-04-06_21-18-59.png" width="720"/></p>
+<h2>w3</h2>
 <p><em><strong>了解四輪機器人</strong></em></p>
+<p>翻譯的網址:<a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p>
 <p>翻譯</p>
 <p>路徑位置和長度計算方法<span>(Path position and length calculation methods)</span></p>
 <p>沿著路徑對象，可以定義固有位置。該位置（也稱為路徑位置）與路徑對象的位置不同。雖然路徑對象的位置是路徑對象原點的位置（在選擇路徑時顯示為白色線框立方體），但是路徑位置或固有路徑位置是沿路徑的位置值</p>
@@ -930,3 +932,333 @@ void main() {
 <p>運行模擬，然後復制並粘貼機器人：您將看到重複的機器人將直接運行，因為附加的子腳本負責啟動各自外部應用程序的新實例，或調用適當的插件函數。</p>
 <p><em><strong>心得</strong></em></p>
 <p>CoppeliaSim 裡面有許多功能可以供我們使用，例如裡面的假人可以被用來測量與機器人的距離，可以被偵測器偵測到的，同時具有可以放在路徑上做為輔助的對象……等，在這個電子書裡讓我訝異的是他的API 不是只有Python能用而已，可以用許多程式來寫API，讓我覺得自己所學的還不太足夠應該多加努力。</p>
+<h2>w6</h2>
+<p><span style="color: #000000;"><em><strong>翻譯</strong></em></span></p>
+<p><span>Programming Fundamentals</span></p>
+<p>編程基礎</p>
+<p>This chapter introduces the basic concepts of programming with Webots. Webots controllers can be written in C/C++, Java, Python or<em>MATLAB</em><sup>TM</sup>.<span> </span></p>
+<p>本章介紹使用<span>Webots</span>進行編程的基本概念。<span> Webots</span>控制器可以用<span>C / C ++</span>，<span>Java</span>，<span>Python</span>或<em>MATLAB</em><sup>TM</sup>編寫。 </p>
+<p><span>Besides their syntactic differences all these languages share the same low-level implementation.</span></p>
+<p><span> </span>除了語法上的差異外，所有這些語言都共享相同的低階實現。</p>
+<p><span> </span><span>As long as the sequence of function/method calls does not vary, every programming language will yield exactly the same simulation results.</span></p>
+<p>只要函數<span>/</span>方法的調用順序不變，每種編程語言都會產生完全相同的仿真結果。</p>
+<p>Hence, the concepts explained here with C examples also apply to C++, Java, Python and MATLAB.</p>
+<p>因此，此處用<span>C</span>示例說明的概念也適用於<span>C ++</span>，<span>Java</span>，<span>Python</span>和<span>MATLAB</span>。</p>
+<p><span>Controller Programming</span></p>
+<p>控制器編程</p>
+<p><span>Hello World Example</span></p>
+<p><span>The tradition in computer science is to start with a "Hello World!" example. So here is a "Hello World!" example for a Webots controller:</span></p>
+<p>你好世界範例</p>
+<p>計算機科學的傳統始於“<span> Hello World</span>！”。 例。 這就是“<span> Hello World</span>！”<span> Webots</span>控制器的範例：</p>
+<p><img alt="" height="410" src="/images/1.jpg" width="1058"/></p>
+<p>This code repeatedly prints "Hello World!" to the standard output stream which is redirected to Webots console. The standard output and error streams are automatically redirected to Webots console for all Webots supported languages.</p>
+<p>此代碼反复打印“ Hello World！”。 到標準輸出流，該輸出將重定向到Webots控制台。 對於所有Webots支持的語言，標準輸出和錯誤流將自動重定向到Webots控制台。</p>
+<p>Webots C API (Application Programming Interface) is provided by regular C header files. These header files must be included using statements like #include &lt;webots/xyz.h&gt; where xyz represents the name of a Webots node in lowercase.</p>
+<div class="tlid-input input">
+<div class="source-wrap">
+<div class="input-full-height-wrapper tlid-input-full-height-wrapper">
+<div class="source-input">
+<div class="source-footer-wrap source-or-target-footer">
+<div class="source-footer">
+<div class="speech-wrap source-or-target-footer-button left-positioned">
+<div aria-disabled="false" aria-label="開啟語音輸入功能" aria-pressed="false" class="speech-button goog-toolbar-button" data-tooltip="開啟語音輸入功能" data-tooltip-align="t,c" id="gt-speech" role="button" tabindex="0"><span class="jfk-button-img"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tlid-results-container results-container">
+<div class="tlid-result result-dict-wrapper">
+<div class="result tlid-copy-target">
+<div class="text-wrap tlid-copy-target">
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span title="">Webots C API（應用程序編程接口）由常規C頭文件提供。</span> <span class="" title="">這些頭文件必須使用#include &lt;webots / xyz.h&gt;之類的語句包括在內，其中xyz表示小寫的Webots節點的名稱。</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">Like with any regular C code it is also possible to include the standard C headers, e.g. #include &lt;stdio.h&gt;. A call to the initialization wb_robot_init function is required before any other C API function call. </span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">像任何常規C代碼一樣，也可以包括標準C標頭，例如 #include &lt;stdio.h&gt;。 在調用任何其他C API函數之前，需要先調用初始化wb_robot_init函數。</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">This function initializes the communication between the controller and Webots. The wb_robot_cleanup function does the opposite: it closes the communication between the controller and Webots to terminate the controller smoothly. Note that the wb_robot_init and wb_robot_cleanup functions exist only in the C API, they do not have any equivalent in the other supported programming languages.</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">該功能初始化控制器和Webot之間的通信。 wb_robot_cleanup函數的作用與此相反：它關閉了控制器和Webot之間的通信，以平滑地終止控制器。 請注意，wb_robot_init和wb_robot_cleanup函數僅存在於C API中，在其他受支持的編程語言中沒有任何等效功能。</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">Usually the highest level control code is placed inside a for or a while loop. Within that loop there is a call to the wb_robot_step function. This function synchronizes the controller's data with the simulator. The wb_robot_step function needs to be present in every controller and it must be called at regular intervals, therefore it is usually placed in the main loop as in the above example.</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">通常，最高級別的控制代碼位於for或while循環內。 在該循環中，調用了wb_robot_step函數。 該功能使控制器的數據與模擬器同步。 wb_robot_step函數必須存在於每個控制器中，並且必須以規則的時間間隔調用，因此，如上例所示，通常將其放置在主循環中。</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">The value 32 specifies the duration of the control steps, i.e., the wb_robot_step function shall compute 32 milliseconds of simulation and then return. This duration specifies an amount of simulated time, not real (wall clock) time, so it may actually take 1 millisecond or one minute of real time, depending on the complexity of the simulated world.</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">值32指定控制步驟的持續時間，即wb_robot_step函數應計算32毫秒的仿真，然後返回。 此持續時間指定的是模擬時間量，而不是實際（牆上時鐘）時間，因此實際時間可能需要1毫秒或1分鐘，這取決於模擬世界的複雜性。</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>Note that in this "Hello World!" example, the exit condition of the </span><code>while</code><span><span> </span>loop is the return value of the<span> </span></span><code>wb_robot_step</code><span><span> </span>function. This function will indeed return<span> </span></span><code>-1</code><span><span> </span>when Webots terminates the controller (see<span> </span></span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/controller-programming#controller-termination">Controller Termination</a><span>). Therefore, in this example, the control loop will run as long as the simulation runs. When the loop exists, no further communication with Webots is possible and the only option is to confirm to Webots to close the communication by calling the<span> </span></span><code>wb_robot_cleanup</code><span><span> </span>function.</span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0">
+<div class="tlid-input input">
+<div class="source-wrap">
+<div class="input-full-height-wrapper tlid-input-full-height-wrapper">
+<div class="source-input">
+<div class="source-footer-wrap source-or-target-footer">
+<div class="source-footer">
+<div class="speech-wrap source-or-target-footer-button left-positioned">
+<div aria-disabled="false" aria-label="開啟語音輸入功能" aria-pressed="false" class="speech-button goog-toolbar-button" data-tooltip="開啟語音輸入功能" data-tooltip-align="t,c" id="gt-speech" role="button" tabindex="0"><span class="jfk-button-img"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tlid-results-container results-container">
+<div class="tlid-result result-dict-wrapper">
+<div class="result tlid-copy-target">
+<div class="result-header">
+<div aria-label="收藏翻譯" class="starbutton jfk-button-flat jfk-button unstarred" data-tooltip="收藏翻譯" data-tooltip-align="t,c" role="button" tabindex="0">
+<div class="jfk-button-img"></div>
+</div>
+</div>
+<div class="text-wrap tlid-copy-target">
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span title="">請注意，在此“ Hello World！”中</span> <span class="" title="">例如，while循環的退出條件是wb_robot_step函數的返回值。</span> <span title="">當Webots終止控制器時，此函數的確會返回-1（請參閱控制器終止）。</span> <span class="" title="">因此，在此示例中，控制循環將在仿真運行期間一直運行。</span> <span class="" title="">當存在循環時，無法與Webots進行進一步的通信，並且唯一的選擇是通過調用wb_robot_cleanup函數來向Webots確認關閉通信。</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">Reading Sensors</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">讀數傳感器</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">Now that we have seen how to print a message to the console, we shall see how to read the sensors of a robot. The next example does continuously update and print the value returned by a DistanceSensor:</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title="">現在，我們已經了解瞭如何將消息打印到控制台，我們將看到如何讀取機器人的傳感器。 下一個示例確實不斷更新並打印由DistanceSensor返回的值：</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><img alt="" height="640" src="/images/2.jpg" width="1056"/></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>As you can notice, prior to using a device, it is necessary to get the corresponding device tag (</span><code>WbDeviceTag</code><span>); this is done using the<span> </span></span><code>wb_robot_get_device</code><span><span> </span>function. The<span> </span></span><code>WbDeviceTag</code><span><span> </span>is an opaque type that is used to identify a device in the controller code. Note that the string passed to this function,<span> </span></span><em>"my_distance_sensor"</em><span><span> </span>in this example, refers to a device name specified in the robot description (".wbt" or ".proto" file). If the robot has no device with the specified name, this function returns 0.</span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>如您所見，在使用設備之前，有必要獲取相應的設備標籤（WbDeviceTag）。 這是使用wb_robot_get_device函數完成的。 WbDeviceTag是不透明的類型，用於在控制器代碼中標識設備。 請注意，在此示例中，傳遞給此函數的字符串“ my_distance_sensor”是指機械手描述中指定的設備名稱（“ .wbt”或“ .proto”文件）。 如果機器人沒有指定名稱的設備，則此函數返回0。</span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>Each sensor must be enabled before it can be used. If a sensor is not enabled it returns undefined values. Enabling a sensor is achieved by using the corresponding <code>wb_*_enable</code><span><span> </span>function, where the star (</span><code>*</code><span>) stands for the sensor type. Every<span> </span></span><code>wb_*_enable</code><span><span> </span>function allows to specify an update delay in milliseconds. The update delay specifies the desired interval between two updates of the sensor's data.</span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span>必須先啟用每個傳感器，然後才能使用它。 如果未啟用傳感器，它將返回未定義的值。 通過使用相應的wb _ * _ enable函數來啟用傳感器，其中星號（*）代表傳感器類型。 每個wb _ * _ enable函數均允許指定更新延遲（以毫秒為單位）。 更新延遲指定兩次傳感器數據更新之間的期望間隔。</span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span>In the usual case, the update delay is chosen to be similar to the control step (<code>TIME_STEP</code><span>) and hence the sensor will be updated at every<span> </span></span><code>wb_robot_step</code><span><span> </span>function call. If, for example, the update delay is chosen to be twice the control step then the sensor data will be updated every two<span> </span></span><code>wb_robot_step</code><span><span> </span>function calls: this can be used to simulate a slow device. Note that a larger update delay can also speed up the simulation, especially for CPU intensive devices like the<span> </span></span><a href="https://cyberbotics.com/doc/reference/camera">Camera</a><span>.</span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><span></span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><span>在通常情況下，更新延遲被選擇為與控制步驟（TIME_STEP）相似，因此傳感器將在每次wb_robot_step函數調用時進行更新。 例如，如果將更新延遲選擇為控制步驟的兩倍，則每兩個wb_robot_step函數調用將更新一次傳感器數據：這可用於模擬慢速設備。 請注意，較大的更新延遲也可以加快仿真速度，尤其是對於像相機這樣佔用大量CPU資源的設備而言。</span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><span></span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><span>On the contrary, it would be pointless to choose an update delay smaller than the control step, because it will not be possible for the controller to process the device's data at a higher frequency than that imposed by the control step. It is possible to disable a device at any time using the corresponding <code>wb_*_disable</code><span><span> </span>function. This may increase the simulation speed.</span></span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><span><span></span></span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><span><span>相反，選擇小於控制步驟的更新延遲將毫無意義，因為控制器將不可能以比控制步驟所施加的頻率更高的頻率來處理設備的數據。 使用對應的wb _ * _ disable函數可以隨時禁用設備。 這可以提高仿真速度。</span></span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><span><span></span></span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0">
+<p>The sensor value is updated during the call to the<span> </span><code>wb_robot_step</code><span> </span>function. The call to the<span> </span><code>wb_distance_sensor_get_value</code><span> </span>function retrieves the latest value.</p>
+<p>Note that some device return vector values instead of scalar values, for example these functions:</p>
+<p>在調用wb_robot_step函數期間，將更新傳感器值。 調用wb_distance_sensor_get_value函數可檢索最新值。</p>
+<p>請注意，某些設備返回矢量值而不是標量值，例如，以下函數：</p>
+<p><img alt="" height="86" src="/images/3.jpg" width="498"/></p>
+<p><span>Each function returns a pointer to three double values. The pointer is the address of an array allocated by the function internally. These arrays should never be explicitly deleted by the controller code. They will be automatically deleted when necessary. The array contains exactly three double values. Hence accessing the array beyond index 2 is illegal and may crash the controller. Finally, note that the array elements should not be modified, for this reason the pointer is declared as </span><em>const</em><span>. Here are correct examples of code using these functions:</span></p>
+<p><span></span></p>
+<p><span>每個函數都返回一個指向三個double值的指針。 指針是函數在內部分配的數組的地址。 這些數組絕不能由控制器代碼顯式刪除。 它們將在必要時自動刪除。 該數組恰好包含三個double值。 因此，訪問超出索引2的數組是非法的，並且可能使控制器崩潰。 最後，請注意，不應修改數組元素，因此，指針被聲明為const。 這是使用這些功能的正確代碼示例：</span></p>
+<p><span><img alt="" height="500" src="/images/4.jpg" width="1056"/></span></p>
+<p><span>And here are incorrect examples:</span></p>
+<p><span>這是不正確的範例：</span></p>
+<p><span><img alt="" height="218" src="/images/5.jpg" width="1056"/></span></p>
+Using Actuators</div>
+<div class="result-shield-container tlid-copy-target" tabindex="0">使用執行器</div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0">
+<p>The example below shows how to make a rotational motor oscillate with a 2 Hz sine signal.</p>
+<p>Just like sensors, each Webots actuator must be identified by a<span> </span><code>WbDeviceTag</code><span> </span>returned by the<span> </span><code>wb_robot_get_device</code><span> </span>function. However, unlike sensors, actuators don't need to be expressly enabled; they actually don't have<span> </span><code>wb_*_enable</code><span> </span>functions.</p>
+<p>以下示例顯示瞭如何使旋轉電機以2 Hz正弦信號振盪。</p>
+<p>就像傳感器一樣，每個Webots執行器都必須由wb_robot_get_device函數返回的WbDeviceTag進行標識。 但是，與傳感器不同的是，無需明確啟用執行器。 他們實際上沒有wb _ * _ enable函數。</p>
+<p><span>To control a motion, it is generally useful to decompose that motion in discrete steps that correspond to the control step. As before, an infinite loop is used here: at each iteration a new target position is computed according to a sine equation. The </span><code>wb_motor_set_position</code><span><span> </span>function stores a new position request for the corresponding rotational motor. Note that the<span> </span></span><code>wb_motor_set_position</code><span><span> </span>function stores the new position, but it does not immediately actuate the motor. The effective actuation starts on the next line, in the call to the<span> </span></span><code>wb_robot_step</code><span><span> </span>function.</span></p>
+<p><span>為了控制運動，通常以與控制步驟相對應的離散步驟分解該運動。 如前所述，這裡使用了無限循環：在每次迭代中，根據正弦方程計算新的目標位置。 wb_motor_set_position函數存儲相應旋轉電機的新位置請求。 請注意，wb_motor_set_position函數存儲新位置，但不會立即啟動電動機。 有效的致動從對wb_robot_step函數的調用的下一行開始。</span></p>
+<p><span>The <code>wb_robot_step</code><span><span> </span>function sends the actuation command to the<span> </span></span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span><span> </span>but it does not wait for the<span> </span></span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span><span> </span>to complete the motion (i.e. reach the specified target position); it just simulates the motor's motion for the specified number of milliseconds.</span></span></p>
+<p><span><span>wb_robot_step函數將致動命令發送到RotationalMotor，但不等待RotationalMotor完成運動（即到達指定的目標位置）； 它只是在指定的毫秒數內模擬電動機的運動。</span></span></p>
+<p><span><span><img alt="" height="721" src="/images/6.jpg" width="1054"/></span></span></p>
+<p><span><span>When the <code>wb_robot_step</code><span><span> </span>function returns, the motor has moved by a certain (linear or rotational) amount which depends on the target position, the duration of the control step (specified with the<span> </span></span><code>wb_robot_step</code><span><span> </span>function argument), the velocity, acceleration, force, and other parameters specified in the ".wbt" description of the<span> </span></span><code>Motor</code><span>.<span> </span></span></span></span></p>
+<p><span><span><span>當wb_robot_step函數返回時，電機已移動了一定量（線性或旋轉），具體取決於目標位置，控制步驟的持續時間（由wb_robot_step函數參數指定），速度，加速度，力等 電動機的“ .wbt”描述中指定的參數。</span></span></span></p>
+<p><span><span><span>For example, if a very small control step or a low motor velocity is specified, the motor will not have moved much when the <code>wb_robot_step</code><span><span> </span>function returns. In this case several control steps are required for the<span> </span></span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span><span> </span>to reach the target position. If a longer duration or a higher velocity is specified, then the motor may have fully completed the motion when the<span> </span></span><code>wb_robot_step</code><span><span> </span>function returns.</span></span></span></span></p>
+<p><span><span><span><span>例如，如果指定了非常小的控制步長或較低的電動機速度，則當wb_robot_step函數返回時，電動機將不會移動太多。 在這種情況下，RotationalMotor需要幾個控制步驟才能達到目標位置。 如果指定了更長的持續時間或更高的速度，則當wb_robot_step函數返回時，電動機可能已完全完成運動。</span></span></span></span></p>
+<p><span><span><span><span>Note that the <code>wb_motor_set_position</code><span><span> </span>function only specifies the<span> </span></span><em>desired</em><span><span> </span>target position. Just like with real robots, it is possible (in physics-based simulations only), that the<span> </span></span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span><span> </span>is not able to reach this position, because it is blocked by obstacles or because the motor's torque (</span><code>maxForce</code><span>) is insufficient to oppose gravity, etc.</span></span></span></span></span></p>
+<p><span><span><span><span><span>請注意，wb_motor_set_position函數僅指定所需的目標位置。 就像真正的機器人一樣，RotationalMotor有可能（僅在基於物理的模擬中）無法到達此位置，原因是它被障礙物阻擋，或者因為電動機的扭矩（maxForce）不足以抵抗重力等。 </span></span></span></span></span></p>
+<p><span><span><span><span><span>If you want to control the motion of several <a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotors</a><span><span> </span>simultaneously, then you need to specify the desired position for each<span> </span></span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span><span> </span>separately, using the<span> </span></span><code>wb_motor_set_position</code><span><span> </span>function. Then you need to call the<span> </span></span><code>wb_robot_step</code><span><span> </span>function once to actuate all the<span> </span></span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotors</a><span><span> </span>simultaneously.</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>如果要同時控制多個RotationalMotor的運動，則需要使用wb_motor_set_position函數分別為每個RotationalMotor指定所需的位置。 然後，您需要調用wb_robot_step函數一次以同時啟動所有RotationalMotor。</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>The "step" and "wb_robot_step" Functions</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>“步驟”和“ wb機器人步驟”功能</span></span></span></span></span></span></p>
+<p>Webots uses two different time steps:</p>
+<ul>
+<li>The simulation step (specified in the Scene Tree:<span> </span><code>WorldInfo.basicTimeStep</code>)</li>
+<li>The control step (specified as an argument of the<span> </span><code>wb_robot_step</code><span> </span>function for each robot)</li>
+</ul>
+<p>Webots使用兩個不同的時間步驟：</p>
+<p>模擬步驟（在“場景樹”中指定：WorldInfo.basicTimeStep）<br/>控制步驟（指定為每個機器人的wb_robot_step函數的參數）</p>
+<p><span>The simulation step is the value specified in </span><code>WorldInfo.basicTimeStep</code><span><span> </span>(in milliseconds). It indicates the duration of one step of simulation, i.e. the time interval between two computations of the position, speed, collisions, etc. of every simulated object. If the simulation uses physics (vs. kinematics), then the simulation step also specifies the interval between two computations of the forces and torques that need to be applied to the simulated rigid bodies.</span></p>
+<p><span>模擬步驟是WorldInfo.basicTimeStep中指定的值（以毫秒為單位）。 它指示了一個模擬步驟的持續時間，即每個模擬對象的位置，速度，碰撞等兩次計算之間的時間間隔。 如果模擬使用物理學（相對於運動學），則模擬步驟還指定需要對模擬剛體施加力和扭矩的兩次計算之間的間隔。</span></p>
+<p><span>The control step is the duration of an iteration of the control loop. It corresponds to the parameter passed to the <code>wb_robot_step</code><span><span> </span>function. The<span> </span></span><code>wb_robot_step</code><span><span> </span>function advances the controller time of the specified duration. It also synchronizes the sensors and actuators data with the simulator according to the controller time.</span></span></p>
+<p><span><span>控制步驟是控制循環迭代的持續時間。 它對應於傳遞給wb_robot_step函數的參數。 wb_robot_step函數可將指定時間的控制器時間提前。 它還根據控制器時間將傳感器和執行器的數據與模擬器同步。</span></span></p>
+<p><span><span>Every controller needs to call the <code>wb_robot_step</code><span><span> </span>function at regular intervals. If a controller does not call the<span> </span></span><code>wb_robot_step</code><span><span> </span>function, then the sensors and actuators won't be updated and the simulator will block (in synchronous mode only). Because it needs to be called regularly, the<span> </span></span><code>wb_robot_step</code><span><span> </span>function call is usually placed in the main loop of the controller.</span></span></span></p>
+<p><span><span><span>每個控制器都需要定期調用wb_robot_step函數。 如果控制器未調用wb_robot_step函數，則不會更新傳感器和執行器，並且模擬器將阻塞（僅在同步模式下）。 由於需要定期調用，因此wb_robot_step函數調用通常位於控制器的主循環中。</span></span></span></p>
+<p><span><span><span>The execution of a simulation step is an atomic operation: it cannot be interrupted. Hence a sensor measurement or a motor actuation can only take place between two simulation steps. For that reason the control step specified with each <code>wb_robot_step</code><span><span> </span>function calls must be a multiple of the simulation step. So, for example, if the simulation step is 16 ms, then the control step argument passed to the<span> </span></span><code>wb_robot_step</code><span><span> </span>function can be 16, 32, 64, 128, etc.</span></span></span></span></p>
+<p><span><span><span><span>模擬步驟的執行是一項原子操作：不能中斷。 因此，傳感器測量或電機驅動只能在兩個模擬步驟之間進行。 因此，每個wb_robot_step函數調用指定的控制步驟必須是模擬步驟的倍數。 因此，例如，如果模擬步驟為16 ms，則傳遞給wb_robot_step函數的控制步驟參數可以為16、32、64、128等。</span></span></span></span></p>
+<p><span><span><span><span>If the simulation is run in step-by-step mode, i.e., by clicking on the <strong>Step</strong><span><span> </span>button (see<span> </span></span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/the-user-interface">The User Interface</a><span><span> </span>section), then a single step having the simulation step duration is executed. The following<span> </span></span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/controller-programming#synchronization-of-simulation-and-controller-steps">figure</a><span><span> </span>depicts in details the synchronization between the simulation status, the controller status and the step clicks.</span></span></span></span></span></p>
+<p><span><span><span><span><span>如果仿真以逐步模式運行，即通過單擊“步進”按鈕（請參見“用戶界面”部分），則將執行具有仿真步長的單個步驟。 下圖詳細描述了仿真狀態，控制器狀態和步驟咔嗒聲之間的同步。</span></span></span></span></span></p>
+<p><span><span><span><span><span><img alt="" height="400" src="/images/7.png" width="275"/></span></span></span></span></span></p>
+<p><span><span><span><span><span>At every step, all the commands before the <code>wb_robot_step</code><span><span> </span>function call statements are executed first and the simulation stops in the middle of the execution of the<span> </span></span><code>wb_robot_step</code><span><span> </span>function. Webots API functions are executed but they are applied to the simulation world only when calling the<span> </span></span><code>wb_robot_step</code><span><span> </span>function, that is when the controller process communicates with Webots process. When the simulation stops, the new simulation status has already been computed, the simulation time has been updated and the new sensors values are ready. Note that the first step includes the initialization too. So all the statements before the second<span> </span></span><code>wb_robot_step</code><span><span> </span>function call are executed.</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>在每個步驟中，首先執行wb_robot_step函數調用語句之前的所有命令，並且模擬在wb_robot_step函數執行的中間停止。 Webots API函數已執行，但僅在調用wb_robot_step函數時（即，控制器進程與Webots進程進行通信時），它們才被應用到仿真世界。 模擬停止時，已經計算出新的模擬狀態，更新了模擬時間，並且準備了新的傳感器值。 請注意，第一步也包括初始化。 因此，第二個wb_robot_step函數調用之前的所有語句都將執行。</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>Using Sensors and Actuators Together</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>一起使用傳感器和執行器</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>Webots and each robot controller are executed in separate processes. For example, if a simulation involves two robots, there will be three processes in total: one for Webots and two for the two robots. Each controller process exchanges sensors and actuators data with the Webots process during the <code>wb_robot_step</code><span><span> </span>function calls. So for example, the<span> </span></span><code>wb_motor_set_position</code><span><span> </span>function does not immediately send the data to Webots. Instead it stores the data locally and the data is effectively sent when the<span> </span></span><code>wb_robot_step</code><span><span> </span>function is called.</span></span></span></span></span></span></span></p>
+<div class="tlid-results-container results-container">
+<div class="tlid-result result-dict-wrapper">
+<div class="result tlid-copy-target">
+<div class="text-wrap tlid-copy-target">
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span title="">Webot和每個機器人控制器在單獨的過程中執行。</span> <span class="" title="">例如，如果一個模擬涉及兩個機器人，則總共將有三個過程：一個用於Webot，兩個用於兩個機器人。</span> <span class="" title="">在wb_robot_step函數調用期間，每個控制器進程都與Webots進程交換傳感器和執行器數據。</span> <span class="" title="">因此，例如，wb_motor_set_position函數不會立即將數據發送到Webots。</span> <span class="" title="">相反，它在本地存儲數據，並且在調用wb_robot_step函數時有效地發送了數據。</span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>For that reason the following code snippet is a bad example. Clearly, the value specified with the first call to the </span><code>wb_motor_set_position</code><span><span> </span>function will be overwritten by the second call:</span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>因此，以下代碼段是一個不好的示例。 顯然，第一次調用wb_motor_set_position函數指定的值將被第二次調用覆蓋：</span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><img alt="" height="134" src="/images/8.jpg" width="900"/></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>Similarly this code does not make much sense either:</span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>同樣，此代碼也沒有太大意義：</span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><img alt="" height="215" src="/images/9.jpg" width="690"/></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span>Since there was no call to the <code>wb_robot_step</code><span><span> </span>function between the two sensor readings, the values returned by the sensor cannot have changed in the meantime. A working version would look like this:</span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span>由於在兩個傳感器讀數之間沒有調用wb_robot_step函數，因此在此期間傳感器返回的值不能更改。 工作版本如下所示：</span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span><img alt="" height="281" src="/images/10.jpg" width="638"/></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0"><span class="tlid-translation translation" lang="zh-TW"><span class="" title=""><span><span></span></span></span></span></div>
+<div class="result-shield-container tlid-copy-target" tabindex="0">
+<p>However, the generally recommended approach is to have a single<span> </span><code>wb_robot_step</code><span> </span>function call in the main control loop, and to use it to update all the sensors and actuators simultaneously, like this:</p>
+<pre>但是，通常建議的方法是在主控制循環中只有一個wb_robot_step函數調用，並使用它同時更新所有傳感器和執行器，如下所示：<br/><br/><img alt="" height="161" src="/images/11.jpg" width="555"/></pre>
+<p><span>Note that it is important to call the </span><code>wb_robot_step</code><span><span> </span>function at the beginning of the loop, in order to make sure that the sensors already have valid values prior to entering the<span> </span></span><code>readSensors</code><span><span> </span>function. Otherwise the sensors will have undefined values during the first iteration of the loop, hence, the following is not a good example:</span></p>
+<p><span>請注意，在循環開始時調用wb_robot_step函數很重要，以確保在進入readSensors函數之前傳感器已經具有有效值。 否則，在循環的第一次迭代中，傳感器將具有不確定的值，因此，以下示例不是一個好例子：</span></p>
+<p><span><img alt="" height="165" src="/images/12.jpg" width="983"/></span></p>
+<p><span>Here is a complete example of using sensors and actuators together. The robot used here is using differential steering. It uses two proximity sensors (<a href="https://cyberbotics.com/doc/reference/distancesensor">DistanceSensor</a><span>) to detect obstacles.</span></span></p>
+<p><span><span>這是一起使用傳感器和執行器的完整示例。 這裡使用的機器人正在使用差速轉向。 它使用兩個接近傳感器（DistanceSensor）來檢測障礙物。</span></span></p>
+<p><span><span><img alt="" height="755" src="/images/13.jpg" width="703"/></span></span></p>
+<p><span><span>Using Controller Arguments</span></span></p>
+<p><span><span>使用控制器參數</span></span></p>
+<p><span><span>In the ".wbt" file, it is possible to specify arguments that are passed to a controller when it starts. They are specified in the controllerArgs field of the Robot node, and they are passed as parameters of the main function. For example, this can be used to specify parameters that vary for each robot's controller.<br/>For example if we have:</span></span></p>
+<p><span><span>在“ .wbt”文件中，可以指定啟動時傳遞給控制器的參數。 它們在Robot節點的controllerArgs字段中指定，並作為主函數的參數傳遞。 例如，可用於指定隨每個機器人控制器而變化的參數。<br/>例如，如果我們有：</span></span></p>
+<p><span><span><img alt="" height="125" src="/images/14.jpg" width="543"/></span></span></p>
+<p><span><span>And if the controller's name is <em>"demo"</em><span>, then this sample controller code:</span></span></span></p>
+<p><span><span><span>如果控制器的名稱為“ demo”，則此示例控制器代碼為：</span></span></span></p>
+<p><span><span><span><img alt="" height="280" src="/images/15.jpg" width="433"/></span></span></span></p>
+<p><span><span><span>This will print:</span></span></span></p>
+<p><span><span><span>這將打印：</span></span></span></p>
+<p><span><span><span><img alt="" height="108" src="/images/16.jpg" width="261"/></span></span></span></p>
+<p><span><span><span>Controller Termination</span></span></span></p>
+<p><span><span><span>控制器終端</span></span></span></p>
+<p><span><span><span>Usually a controller process runs in an endless loop: it is terminated (killed) when Webots quits, the simulation is reset, the world is reloaded, a new simulation is loaded, or the controller name is changed in the Webots scene tree. The controller cannot prevent its own termination but it can be notified shortly before this happens. </span></span></span></p>
+<p><span><span><span>通常，控制器進程會無休止地運行：當Webots退出，模擬被重置，世界被重新加載，新的模擬被加載或者Webots場景樹中的控制器名稱被更改時，它終止（被殺死）。 控制器無法阻止其自身終止，但是可以在發生這種情況之前立即通知控制器。</span></span></span></p>
+<p><span><span><span>The <code>wb_robot_step</code><span><span> </span>function returns -1 when the controller process is going to be terminated by Webots. Then the controller has 1 second (real time) to save important data, close files, etc. before it is effectively killed by Webots. Here is an example that shows how to save data before the upcoming termination:</span></span></span></span></p>
+<p><span><span><span><span>當控制器進程將由Webots終止時，wb_robot_step函數返回-1。 然後，控制器將有1秒（實時）的時間來保存重要數據，關閉文件等，直到Webots有效地將其殺死。 這是顯示如何在即將終止之前保存數據的示例：</span></span></span></span></p>
+<p><span><span><span><span><img alt="" height="481" src="/images/17.jpg" width="511"/></span></span></span></span></p>
+<p><span><span><span><span>In some cases, it is up to the controller to make the decision of terminating the simulation. For example in the case of search and optimization algorithms: the search may terminate when a solution is found or after a fixed number of iterations (or generations).</span></span></span></span></p>
+<p><span><span><span><span>在某些情況下，取決於控制器來決定終止仿真。 例如，在搜索和優化算法的情況下：當找到解決方案時或在固定數量的迭代（或生成）之後，搜索可能會終止。</span></span></span></span></p>
+<p><span><span><span><span>In this case the controller should just save the experiment results and quit by returning from the <code>main</code><span><span> </span>function or by calling the<span> </span></span><code>exit</code><span><span> </span>function. This will terminate the controller process and freeze the simulation at the current simulation step. The physics simulation and every robot involved in the simulation will stop.</span></span></span></span></span></p>
+<p><span><span><span><span><span>在這種情況下，控制器應只保存實驗結果並通過從主函數返回或調用退出函數退出。 這將終止控制器過程並凍結當前模擬步驟的模擬。 物理模擬以及模擬中涉及的每個機器人都將停止。</span></span></span></span></span></p>
+<p><span><span><span><span><span><img alt="" height="121" src="/images/18.jpg" width="341"/></span></span></span></span></span></p>
+<p><span><span><span><span><span>If only one robot controller needs to terminate but the simulation should continue with the other robots, then the terminating robot should call the <code>wb_robot_cleanup</code><span><span> </span>function right before quitting:</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>如果僅一個機器人控制器需要終止，而仿真應與其他機器人繼續進行，則終止的機器人應在退出之前立即調用wb_robot_cleanup函數：</span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><img alt="" height="145" src="/images/19.jpg" width="376"/></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span>Note that the exit status as well as the value returned by the <code>main</code><span><span> </span>function are ignored by Webots.</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span>請注意，Webots會忽略退出狀態以及主函數返回的值。</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span>Shared Libraries</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span>共享庫</span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span>Creating shared libraries can be very useful to share code between controllers and/or plugins. There are several ways to do so, but we recommend to place them into a subdirectory of the <code>libraries</code><span><span> </span>directory of your project. Indeed the environment variables of the controllers are modified to include these paths into your [[DY]LD_LIBRARY_]PATH environment variable (depending on the OS). Moreover the main Makefile ("</span><a href="https://github.com/cyberbotics/webots/tree/master/resources/Makefile.include" target="_blank">WEBOTS_HOME/resources/Makefile.include</a><span>") used to compile Webots controllers is able to create shared libraries and to link easily with the Controller libraries, ODE or the Qt framework.</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>創建共享庫對於在控制器和/或插件之間共享代碼非常有用。 有幾種方法可以這樣做，但是我們建議將它們放在項目庫目錄的子目錄中。 實際上，已修改控制器的環境變量，以將這些路徑包括到您的[[DY] LD_LIBRARY_] PATH環境變量中（取決於OS）。 此外，用於編譯Webots控制器的主要Makefile（“ WEBOTS_HOME / resources / Makefile.include”）能夠創建共享庫，並可以輕鬆地與Controller庫，ODE或Qt框架鏈接。</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>A good example of this is the Qt utility library located there: "WEBOTS_HOME/resources/projects/libraries/qt_utils".<br/>If for some reason shared libraries cannot be in the libraries directory, the WEBOTS_LIBRARY_PATH environment variable will be very helpful. The paths it contains will be added at the beginning of the library search path([[DY]LD_LIBRARY_]PATH) when starting the controller.</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>一個很好的例子是位於此處的Qt實用程序庫：“ WEBOTS_HOME / resources / projects / libraries / qt_utils”。<br/>如果由於某種原因共享庫不能位於庫目錄中，則WEBOTS_LIBRARY_PATH環境變量將非常有幫助。 啟動控制器時，它包含的路徑將添加到庫搜索路徑（[[DY] LD_LIBRARY_] PATH）的開頭。</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>Environment Variables</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>環境變量</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>For some projects it will be necessary to define or change variables defined in your environment. They can be changed in the settings of the computer but it may last only for the current session or create conflict with other applications or projects. Webots offers an elegant solution to this. A configuration file named "runtime.ini" can be added to the controller directory. Any environment variable defined in this file will be loaded to the environment each time the controller starts.</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>對於某些項目，有必要定義或更改在您的環境中定義的變量。 可以在計算機的設置中更改它們，但可能僅持續當前會話，或者與其他應用程序或項目產生衝突。 Webots為此提供了一個優雅的解決方案。 可以將名為“ runtime.ini”的配置文件添加到控制器目錄。 每次控制器啟動時，此文件中定義的任何環境變量都會加載到環境中。</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>This configuration file uses the standard INI template that is really simple and easy to write and read. It contains pairs of key and value that can be inside [sections]. Comments can be written on a line after using a semicolon ';' character.<br/>Environment variables in this file can contain references to other environment variables using this syntax : $(MY_VARIABLE_NAME). They will be automatically replaced by the actual value already existing in the environment. The Webots "runtime.ini" supports 7 sections:</span></span></span></span></span></span></span></span></p>
+<p><span><span><span><span><span><span><span><span>此配置文件使用標準的INI模板，該模板非常簡單，易於讀寫。 它包含可以在[sections]內部的鍵和值對。 使用分號“;”後可以在一行上寫註釋。 字符。<br/>該文件中的環境變量可以使用以下語法包含對其他環境變量的引用：$（MY_VARIABLE_NAME）。 它們將自動替換為環境中已經存在的實際值。 Webots的“ runtime.ini”支持7個部分：</span></span></span></span></span></span></span></span></p>
+<ul>
+<li>
+<p><code>[environment variables with paths]</code></p>
+<p>This section should only contain environment variables with either relative or absolute paths. Paths must be separated using the colon symbol ':' and directory components must be separated using the slash symbol '/'. Variables declared in this section will be added on every platform. On Windows, colons will be replaced by semicolon and slash will be replaced by backslash according to the Windows syntax.</p>
+</li>
+<li>
+<p><code>[environment variables]</code></p>
+<p>Environment variables defined in this section will also be added to the environment on every platform but they will be written directly with no syntax change. It's a good location for variables that don't contain any path.</p>
+</li>
+<li>
+<p><code>[environment variables for Windows]</code></p>
+<p>Variables defined in this section will only be added to the environment if the controller is ran on the Windows platform. If you want to declare paths in this section, the value should be written between double-quotes symbols ".</p>
+</li>
+<li>
+<p><code>[environment variables for macOS]</code></p>
+<p>Variables defined here will only be added on macOS and ignored on other platforms.</p>
+</li>
+<li>
+<p><code>[environment variables for Linux]</code></p>
+<p>Variables defined here will be added on all Linux platforms but not on Mac nor Windows.</p>
+</li>
+<li>
+<p><code>[environment variables for Linux 32]</code></p>
+<p>These variables will be added only if the Linux platform is 32 bit.</p>
+</li>
+<li>
+<p><code>[environment variables for Linux 64]</code></p>
+<p>These variables will be added only if the Linux platform is 64 bit.</p>
+</li>
+</ul>
+<p>[帶路徑的環境變量]</p>
+<p>此部分應僅包含具有相對路徑或絕對路徑的環境變量。路徑必須使用冒號'：'分隔，目錄組件必須使用斜杠'/'分隔。本節中聲明的變量將在每個平台上添加。在Windows上，根據Windows語法，冒號將由分號替換，斜杠將由反斜杠替換。</p>
+<p>[環境變量]</p>
+<p>本節中定義的環境變量也將添加到每個平台的環境中，但是它們將直接編寫而無需更改語法。對於不包含任何路徑的變量，這是一個很好的位置。</p>
+<p>[Windows環境變量]</p>
+<p>僅當在Windows平台上運行控制器時，才會將本節中定義的變量添加到環境中。如果要在本節中聲明路徑，則應在雙引號符號“之間寫入值。</p>
+<p>[macOS的環境變量]</p>
+<p>此處定義的變量將僅在macOS上添加，而在其他平台上被忽略。</p>
+<p>[Linux的環境變量]</p>
+<p>此處定義的變量將在所有Linux平台上添加，但不會在Mac和Windows上添加。</p>
+<p>[Linux 32的環境變量]</p>
+<p>僅當Linux平台為32位時，才添加這些變量。</p>
+<p>[Linux 64的環境變量]</p>
+<p>僅當Linux平台是64位時，才添加這些變量。</p>
+<p><span>Here is an example of a typical runtime.ini file.</span></p>
+<p><span>這是典型的runtime.ini文件的示例。</span></p>
+<p><span><img alt="" height="321" src="/images/20.jpg" width="553"/></span></p>
+<p><span>Languages Settings</span></p>
+<p>語言設定</p>
+<p><span>The "runtime.ini" file may also contain language specific sections, named </span><code>[java]</code><span>,<span> </span></span><code>[python]</code><span><span> </span>and<span> </span></span><code>[matlab]</code><span>. Each of this section may include two keys, namely<span> </span></span><code>COMMAND</code><span><span> </span>and<span> </span></span><code>OPTIONS</code><span>. The<span> </span></span><code>COMMAND</code><span><span> </span>key allows you to define a specific version of the language interpreter whereas the<span> </span></span><code>OPTIONS</code><span><span> </span>key allows you to access specific options that will be passed immediately to the language interpreter. For example:</span></p>
+<p><span>“ runtime.ini”文件還可能包含特定於語言的部分，名為[java]，[python]和[matlab]。 每個部分都可以包括兩個鍵，即COMMAND和OPTIONS。 COMMAND鍵允許您定義語言解釋器的特定版本，而OPTIONS鍵則允許您訪問將立即傳遞給語言解釋器的特定選項。 例如：</span></p>
+<p><span><img alt="" height="124" src="/images/21.jpg" width="413"/></span></p>
+<p><span>In the example above, the resulting command issued by Webots will be: <code>/opt/local/bin/python2.7 -m package.name.given my_controller.py</code><span><span> </span>possibly followed by the value of the<span> </span></span><code>controllerArgs</code><span><span> </span>field of the corresponding<span> </span></span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span><span> </span>node.</span></span></p>
+<p><span><span>在上面的示例中，Webots發出的結果命令將是：/opt/local/bin/python2.7 -m package.name.given my_controller.py，其後可能是相應Robot節點的controllerArgs字段的值。</span></span></p>
+<p><span><span><img alt="" height="196" src="/images/22.jpg" width="419"/></span></span></p>
+<p><span><span><img alt="" height="123" src="/images/23.jpg" width="703"/></span></span></p>
+<p><span><span></span></span></p>
+<div class="tlid-input input">
+<div class="source-wrap">
+<div class="input-full-height-wrapper tlid-input-full-height-wrapper">
+<div class="source-input">
+<div class="source-footer-wrap source-or-target-footer">
+<div class="source-footer">
+<div class="speech-wrap source-or-target-footer-button left-positioned">
+<div aria-disabled="false" aria-label="開啟語音輸入功能" aria-pressed="false" class="speech-button goog-toolbar-button" data-tooltip="開啟語音輸入功能" data-tooltip-align="t,c" id="gt-speech" role="button" tabindex="0"><em><strong><span class="jfk-button-img" style="color: #000000;">Python Example</span></strong></em></div>
+<div aria-disabled="false" aria-label="開啟語音輸入功能" aria-pressed="false" class="speech-button goog-toolbar-button" data-tooltip="開啟語音輸入功能" data-tooltip-align="t,c" role="button" tabindex="0"><em><strong><span class="jfk-button-img" style="color: #000000;">Python範例</span></strong></em></div>
+<div aria-disabled="false" aria-label="開啟語音輸入功能" aria-pressed="false" class="speech-button goog-toolbar-button" data-tooltip="開啟語音輸入功能" data-tooltip-align="t,c" role="button" tabindex="0"><em><strong><span class="jfk-button-img" style="color: #000000;"></span></strong></em></div>
+<div aria-disabled="false" aria-label="開啟語音輸入功能" aria-pressed="false" class="speech-button goog-toolbar-button" data-tooltip="開啟語音輸入功能" data-tooltip-align="t,c" role="button" tabindex="0"><em><strong><span class="jfk-button-img" style="color: #000000;"><img alt="" height="664" src="/images/24.jpg" width="1055"/></span></strong></em></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
