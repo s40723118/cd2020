@@ -1,0 +1,365 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CD2020 協同產品設計實習</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- 啟用 LaTeX equations 編輯 -->
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40723118 協同產品設計實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40723118 協同產品設計實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Assignment1.html'>Assignment1</a><ul class='dropdown'><li><a href='python 更新.html'>python 更新</a><li><a href='了解四輪機器人.html'>了解四輪機器人</a></li></ul><li class='has-children'><a href='Assignment2.html'>Assignment2</a><ul class='dropdown'><li class='has-children'><a href='TOP 0 文章.html'>TOP 0 文章</a><ul class='dropdown'><li><a href='心得.html'>心得</a></li></ul><li class='has-children'><a href='webots tutorial.html'>webots tutorial</a><ul class='dropdown'><li><a href='翻譯.html'>翻譯</a></li></li></ul></ul><li class='has-children'><a href='實作紀錄.html'>實作紀錄</a><ul class='dropdown'><li><a href='第二週.html'>第二週</a><li><a href='第三週.html'>第三週</a><li><a href='第五週.html'>第五週</a><li><a href='第六週.html'>第六週</a><li><a href='第七週.html'>第七週</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">python 更新 << <a href='python 更新.html'>Previous</a> <a href='Assignment2.html'>Next</a> >> Assignment2<br /><h1>了解四輪機器人</h1>
+<p>翻譯的網址:<a href="https://www.coppeliarobotics.com/helpFiles/index.html">https://www.coppeliarobotics.com/helpFiles/index.html</a></p>
+<p>翻譯</p>
+<p>路徑位置和長度計算方法<span>(Path position and length calculation methods)</span></p>
+<p>沿著路徑對象，可以定義固有位置。該位置（也稱為路徑位置）與路徑對象的位置不同。雖然路徑對象的位置是路徑對象原點的位置（在選擇路徑時顯示為白色線框立方體），但是路徑位置或固有路徑位置是沿路徑的位置值</p>
+<p>路徑的<span>Bezier</span>點可以是不同的，也可以是重合的：想像一個焊接機器人，其末端執行器是焊接設備的尖端；在兩個連續的<span>Bezier</span>點之間，末端執行器可以：</p>
+<p>在不改變方向的情況下執行平移（即沿著直線）（兩個<span>Bezier</span>點是不同的，但方向相同）。</p>
+<p>執行平移並更改方向（兩個<span>Bezier</span>點是不同的，並且方向不同）。</p>
+<p>在不改變位置的情況下執行旋轉（即更改方向）（兩個<span>Bezier</span>點重合但方向不同）。</p>
+<p>此外，在某些情況下，我們希望焊炬遵循預定的路徑，在某個特定位置暫停（例如，處理較大的焊接點），然後沿該路徑繼續前進。為了正確處理上述<span>3</span>種情況和特殊的暫停情況，重要的是能夠唯一地識別沿路徑（即路徑位置<span>*</span>）的任何位置<span>*</span>（廣義上的位置）以及路徑長度<span>*</span>（從更廣泛的意義上講是長度）。為此，用戶可以選擇幾種位置計算方法：<span> </span></p>
+<p>路徑位置<span>*</span>被描述為沿路徑的累積線性變化。路徑長度<span>*</span>由下式給出：<img alt="" height="24" src="./../images/公式1.jpg" width="92"/></p>
+<p>路徑位置<span>*</span>被描述為沿路徑的累積角度<span>**</span>變化。路徑長度<span>*</span>由下式給出：<img alt="" height="24" src="./../images/公式2.jpg" width="107"/></p>
+<p>路徑位置<span>*</span>被描述為沿路徑的累積（線性變化<span>+</span>角度<span>**</span>變化）。路徑長度<span>*</span>由下式給出：<img alt="" height="24" src="./../images/公式3.jpg" width="139"/></p>
+<p>路徑位置<span>*</span>被描述為沿路徑的累積最大值（線性變化，角度<span>**</span>變化）。路徑長度<span>*</span>由下式給出：<img alt="" height="24" src="./../images/公式4.jpg" width="169"/></p>
+<p>路徑位置<span>*</span>被描述為沿路徑的累積（線性變化，如果不為零，否則為角度<span>**</span>）。路徑長度<span>*</span>由下式給出：<img alt="" height="24" src="./../images/公式5.jpg" width="328"/></p>
+<p>路徑位置<span>*</span>被描述為沿路徑的累積（角度<span>**</span>變化，如果不為零，否則為線性變化）。路徑長度<span>*</span>由下式給出：<img alt="" height="24" src="./../images/公式6.jpg" width="347"/></p>
+<p>路徑位置<span>*</span>被描述為沿路徑的（線性變化，角度<span>**</span>變化）的累積歐幾里德距離。路徑長度<span>*</span>由下式給出：<img alt="" height="24" src="./../images/公式7.jpg" width="145"/></p>
+<p>其中Δ<span>l</span>和Δα分別是兩個連續的<span>Bezier</span>點之間的線性和角度變化。角度<span>**</span>變化是規則角度變化乘以角度係數<span>c</span>。<span> c</span>稱為角度到線性的轉換係數，並且可以將角度值和線性值組合在一起。這意味著沿路徑的位置<span>*</span>或路徑長度<span>*</span>始終以線性單位（例如米）給出，而與上面選擇的位置計算方法無關。</p>
+<p><span> </span>默認情況下，紅色標記的項為零。該術語可以看作是<span>Bezier</span>點（或路徑控制點）的虛擬距離或第四坐標（即每個<span>Bezier</span>點將由方向和位置（<span>x</span>，<span>y</span>，<span>z</span>，<span>w</span>）定義，其中<span>w</span>是第四坐標）。這對於沿路徑歸檔暫停點很有用。是兩個連續的<span>Bezier</span>點之間的虛擬距離變化。<span> d</span>是虛擬距離變化的比例因子（例如，如果<span>d</span>加倍，則所有暫停點的暫停持續時間將是兩倍）。為簡化起見，在以下內容中我們將不再提及該術語並將其設為零。</p>
+<p>以下示例闡明了位置和長度計算概念：</p>
+<p><img alt="" height="256" src="./../images/計算1.jpg" width="600"/></p>
+<p><img alt="" height="220" src="./../images/計算2.jpg" width="450"/></p>
+<p><img alt="" height="205" src="./../images/計算3.jpg" width="600"/></p>
+<p><img alt="" height="192" src="./../images/計算4.jpg" width="450"/></p>
+<p>要歸檔沿路徑的特定點處的運動暫停，請執行以下操作：創建3個相同的路徑控制點（位置和方向完全重合），並為中間控制點指定一個虛擬距離值，該值不得為零。在下面的示例中，在3個重合點的虛擬距離為2（在第一和中間重合控制點之間為1，在中間和第三重合控制點之間為1）。如果某個對像以每秒1米的速度沿路徑行進，則它將在重合的控制點處記錄2秒的暫停</p>
+<p><img alt="" height="213" src="./../images/計算5.jpg" width="285"/></p>
+<p></p>
+<p>沿路徑運動<span>(Movement along a Path)</span></p>
+<p>當前固有路徑位置在路徑上顯示為紅色球形（如果啟用了路徑位置顯示）。在模擬過程中，可以隨時使用<span>sim.setPathPosition</span>來控制球沿路徑的位置。確保了解如何計算路徑位置或路徑長度。</p>
+<p>要實際使對象沿路徑移動，首先需要將對象附加到虛擬對象，然後分配虛擬對像以遵循路徑位置（帶有可選的偏移量）。</p>
+<p>導入和導出路徑<span>(Importing and exporting paths)</span></p>
+<p>路徑導入<span>/</span>導出功能可在<span>CSV</span>文件（逗號分隔值）上運行，該<span>CSV</span>文件可以用簡單的文本編輯器創建或讀取，但也可以輕鬆地導入<span>/</span>導出到<span>Microsoft Excel</span>等應用程序中。</p>
+<p>導入路徑</p>
+<p><span>CoppeliaSim</span>的導入功能（<span>[</span>菜單欄<span>-&gt;</span>文件<span>-&gt;</span>導入<span>-&gt; CSV</span>的路徑<span>...]</span>）逐行讀取值，其中每行對應一個控制點。每行應採用以下格式設置：<span> </span></p>
+<p><span>x</span>，<span>y</span>，<span>z</span>，<span>alpha</span>，<span>beta</span>，<span>gamma</span>，<span>relativeVelocity</span>，<span>BezierPointCount</span>，<span>interpolationFactor1</span>，<span>interpolationFactor2</span>，</p>
+<p><span>virtualDistance</span>，<span>auxiliaryFlags</span>，<span>auxiliaryChannel1</span>，<span>auxiliaryChannel2</span>，<span>auxiliaryChannel3</span>，<span>auxiliaryChannel4</span></p>
+<p>其中內容相對應的意思：</p>
+<p><span> </span>（<span>x</span>，<span>y</span>，<span>z</span>）表示控制點在<span>METERS</span>中的位置</p>
+<p>（α，β，γ）表示控制點的方向，以度數表示為歐拉角。默認值為（<span>0,0,0</span>）。</p>
+<p>相對速度已棄用。設為<span>1.0</span></p>
+<p><span>BezierPointCount</span>是控制點所需的<span>Bezier</span>點數。默認值為<span>1</span>。</p>
+<p><span>InterpolationFactor1</span>和<span>InterpolationFactor2</span>是在路徑控制點和<span>Bezier</span>點部分中描述的插值因子。默認值為<span>0.5</span></p>
+<p><span>VirtualDistance</span>：虛擬距離值，添加到該控制點位置的路徑長度上，另請參見路徑位置或路徑長度計算方法。默認值為<span>0.0</span></p>
+<p>輔助標誌：可以用於各種目的的標誌，可以通過<span>sim.getDataOnPath</span>函數進行查詢。默認值為<span>0</span>。</p>
+<p>輔助通道<span>1-4</span>：可以用於各種目的的值，可以通過<span>sim.getDataOnPath</span>函數進行查詢。默認值為<span>0.0</span></p>
+<p>除了前三個值（控制點位置坐標）外，所有其他值都可以省略，在這種情況下，將應用默認值。</p>
+<p>導出路徑</p>
+<p>通過選擇路徑，然後單擊<span>[</span>菜單欄<span>-&gt;</span>文件<span>-&gt;</span>導出<span>-&gt;</span>選定路徑為<span>CSV ...]</span>，可以導出路徑的控制點。在這種情況下，導出格式與前面描述的路徑導入格式相同。</p>
+<p>也可以通過選擇路徑，然後單擊<span>[</span>菜單欄<span>-&gt;</span>文件<span>-&gt;</span>導出<span>-&gt;</span>所選路徑的<span>Bezier</span>曲線為<span>CSV ...]</span>來導出路徑的<span>Bezier</span>點。在這種情況下，創建的文件（導出的文件）中的每一行都對應一個<span>Bezier</span>點，並包含以下值：</p>
+<p><span> </span><span>x</span>，<span>y</span>，<span>z</span>，<span>alpha</span>，<span>beta</span>，<span>gamma</span>，相對速度，虛擬距離，輔助標記，輔助通道<span>1</span>，輔助通道<span>2</span>，assistantChannel3，auxiliaryChannel4</p>
+<p>路徑編輯模式<span>(Path edit mode)</span></p>
+<p>初步說明：路徑編輯模式是一種方便且功能齊全的編輯路徑對象的方法。但是，可以在不進入用於最小化路徑修改的路徑編輯模式的情況下移動和擦除單個路徑點（選擇單個路徑點時，請確保沒有選擇除路徑之外的其他對象）。</p>
+<p>可以通過單擊相應的工具欄按鈕來訪問路徑編輯模式：</p>
+<p><span><img alt="" height="37" src="./../images/路徑編輯一.jpg" width="38"/> </span></p>
+<p><span>[</span>路徑編輯模式工具欄按鈕<span>]</span></p>
+<p><span> </span>上面的工具欄按鈕僅在選擇路徑後才有效。在路徑編輯模式下，窗口中通常顯示場景層次結構的部分用於將路徑控制點顯示為列表。可以使用鼠標選擇列表中的項目，就像在層次結構窗口中的對像一樣。</p>
+<p><img alt="" height="478" src="./../images/路徑編輯二.jpg" width="600"/></p>
+<p><span>[</span>路徑編輯模式<span>]</span></p>
+<p><span> </span>現在可以像常規對像一樣選擇單個控制點。最後選擇的控制點以白色顯示，其他選擇的控制點以黃色顯示，未選擇的控制點以藍色顯示。以類似的方式，可以使用鼠標直接平移控制點，方法是使用工具欄的對象<span>/</span>項目平移工具欄按鈕在與視圖方向垂直的平面中平移所選的控制點：</p>
+<p><span><img alt="" height="37" src="./../images/路徑編輯三.jpg" width="38"/> </span></p>
+<p><span>[</span>對象<span>/</span>項目翻譯工具欄按鈕<span>]</span></p>
+<p><span> </span>在路徑編輯模式下，將顯示路徑編輯模式對話框：</p>
+<p><span> <img alt="" height="478" src="./../images/路徑編輯四.jpg" width="396"/></span><span> </span></p>
+<p><span>[</span>控制點屬性對話框<span>]</span></p>
+<p><span> </span>路徑已關閉：如果選中，則路徑的最後一個控制點將鏈接到其第一個控制點，以關閉路徑並使其循環運行。閉合路徑至少需要<span>3</span>個控制點。</p>
+<p>路徑是平坦的：如果選中，則所有控制點（以及隨後的所有<span>Bezier</span>點）都將約束到路徑對象的本地參考系的<span>z = 0</span>平面。</p>
+<p>自動定向：如果啟用，則將自動計算所有控制點和貝塞爾曲線點的定向，以使該點的<span>z</span>軸沿著路徑，其<span>y</span>軸指向其曲率向外（如果啟用了<span>x up</span>，則<span>y -</span>軸沒有特別限制）。如果禁用，則用戶確定控制點的方向，貝塞爾曲線點的方向將從路徑的控制點的方向內插。</p>
+<p>保持<span>x</span>向上：如果選中，則自動定向功能將使每個<span>Bezier</span>點的<span>z</span>軸沿路徑對齊，並使其<span>x</span>軸沿路徑對象的<span>z</span>軸指向。</p>
+<p>清除選擇：清除控制點的選擇。</p>
+<p>反轉選擇：反轉控制點的選擇狀態。</p>
+<p>製作虛擬對象：在選擇控制點的位置生成虛擬對象。</p>
+<p>貝塞爾曲線插值因子<span>1/2</span>：有關詳細信息，請參見控制點和貝塞爾曲線部分。</p>
+<p>貝塞爾曲線點數：有關詳細信息，請參見控制點和貝塞爾曲線部分。</p>
+<p>虛擬距離：有關詳細信息，請參見關於沿路徑運動的部分。</p>
+<p>輔助標誌：可以用於各種目的的標誌，可以通過<span>sim.getDataOnPath</span>函數進行查詢。</p>
+<p>輔助通道<span>1-4</span>：可以用於各種目的的值，可以通過<span>sim.getDataOnPath</span>函數進行查詢。</p>
+<p>為了精確定位控制點，請使用坐標和變換對話框。如果要編輯控制點的方向，請確保禁用路徑的“自動方向”選項（默認情況下啟用該選項）。</p>
+<p>常規鍵組合（即<span>ctrl-c</span>，<span>ctrl-v</span>，<span>delete</span>和<span>ctrl-x</span>）支持複製<span>/</span>粘貼<span>/</span>刪除<span>/</span>剪切操作。確保主視圖具有焦點，以便按鍵起作用。如果未選擇任何控制點，則黏貼操作會將復制的控制點黏貼到控制點列表的開頭，否則將黏貼到選定的控制點之後（確保不超過一個控制點）。在此階段選擇）。也可以通過彈出菜單或通過<span>[</span>主菜單<span>-&gt;</span>編輯<span>]</span>訪問相同的複制<span>/</span>黏貼<span>/</span>刪除<span>/</span>剪切功能。其他操作包括：</p>
+<p>在路徑的開頭插入新的路徑點<span>/</span>選擇後插入新的路徑點：如果未選擇任何控制點，則在路徑的開頭插入新的控制點；否則，在當前選擇之後插入新的控制點（請確保沒有其他內容）在這種情況下，選擇一個控制點）。</p>
+<p>從貝塞爾曲線創建新路徑：使用當前路徑的貝塞爾點生成一個新的路徑對象，即新路徑的控制點將為當前路徑的貝塞爾點。</p>
+<p>超頻樹<span>(OC trees)</span></p>
+<p><span>OC</span>樹是代表空間分區的對象。它由樹形數據結構組成，其中每個節點正好具有八個子代。佔用的葉節點表示為體素。<span> OC</span>樹可用於為形狀或點雲提供簡化的表示，或者可充當佔用網格<span>/</span>空間：</p>
+<p><span><img alt="" height="393" src="./../images/樹木3.jpg" width="527"/> </span></p>
+<p><span>OC</span>樹是可碰撞，可測量和可檢測的對象。這意味著<span>OC</span>樹：</p>
+<p>可用於與其他可碰撞對象的碰撞檢測。</p>
+<p>可與其他可測量對像一起用於最小距離計算。</p>
+<p>可以被接近傳感器檢測到。</p>
+<p><span>OC</span>樹可以使用<span>[</span>菜單欄<span>-&gt;</span>添加<span>-&gt; OC</span>樹<span>]</span>添加到場景中，並通過<span>OC</span>樹屬性進行編輯。</p>
+<p><span>CoppeliaSim</span>中可用的<span>OC</span>樹計算（即碰撞，距離和接近傳感器計算）也可以通過<span>Coppelia</span>幾何例程作為獨立例程使用。</p>
+<p><span> </span><span>OC</span>樹屬性<span>(OC tree properties)</span></p>
+<p><span>OC</span>樹屬性是場景對象屬性對話框的一部分，該對話框位於<span>[</span>菜單欄<span>-&gt;</span>工具<span>-&gt;</span>場景對象屬性<span>]</span>。您還可以通過雙擊場景層次結構中的對像圖標或單擊其工具欄按鈕來打開對話框：</p>
+<p><span><img alt="" height="37" src="./../images/樹木1.jpg" width="38"/> </span></p>
+<p><span>[</span>場景對象屬性工具欄按鈕<span>]</span></p>
+<p><span> </span>在場景對象屬性對話框中，單擊<span>OC</span>樹按鈕以顯示<span>OC</span>樹對話框（僅當最後選擇的是<span>OC</span>樹時才會顯示<span>OC</span>樹按鈕）。該對話框顯示最後選擇的<span>OC</span>樹的設置和參數：</p>
+<p><span><img alt="" height="342" src="./../images/樹木2.jpg" width="380"/> </span></p>
+<p><span>[OC</span>樹對話框<span>]</span></p>
+<p><span> </span>體素大小：<span>OC</span>樹體素的大小。大小越小，用於<span>OC</span>樹數據結構的內存就越大。</p>
+<p>插入選定的可見對象：允許基於選定的可見對象插入體素。僅考慮虛擬對象，形狀，超頻樹和點雲。選擇要插入的所有對象，然後最後選擇目標<span>OC</span>樹對象。</p>
+<p>減去選定的可見對象：允許基於選定的可見對象刪除體素。僅考慮虛擬對象，形狀，超頻樹和點雲。選擇要插入的所有對象，然後最後選擇目標<span>OC</span>樹對象。</p>
+<p>清除<span>OC</span>樹：從<span>OC</span>樹中刪除所有體素。</p>
+<p>體素具有隨機顏色：每個體素將具有隨機顏色。</p>
+<p>顯示<span>OC</span>樹結構：顯示<span>OC</span>樹數據結構，主要用於調試目的。</p>
+<p>顏色是自發光的：體素將以自發光的顏色顯示。</p>
+<p>顯示點而不是體素：對於包含大量體素的<span>OC</span>樹，顯示可能會很慢。在這種情況下，您可以顯示像素體素，而不是立方體素。</p>
+<p>調整下一次插入的顏色：允許選擇新的顏色，該顏色將用於新的體素插入。<span><br/> <br/> </span></p>
+<p>點雲<span>(Point clouds)</span></p>
+<p>點雲是充當基於<span>OC</span>樹的點容器的對象：</p>
+<p><span> <img alt="" height="416" src="./../images/雲3.jpg" width="599"/></span></p>
+<p>點雲是可碰撞，可測量和可檢測的對象。這意味著點雲：</p>
+<p>可用於與其他基於體積的可碰撞對象（例如<span>OC</span>樹）的碰撞檢測。</p>
+<p>可與其他可測量對像一起用於最小距離計算。</p>
+<p>可以被接近傳感器檢測到。</p>
+<p>可以使用<span>[</span>菜單欄<span>-&gt;</span>添加<span>-&gt;</span>點雲<span>]</span>將點雲添加到場景，並通過點雲屬性進行編輯。</p>
+<p><span>CoppeliaSim</span>中可用的點雲計算（即碰撞，距離和接近傳感器計算）也可以通過<span>Coppelia</span>幾何例程作為獨立例程使用。</p>
+<p><span> </span>點雲屬性<span>(Point cloud properties)</span></p>
+<p>點雲屬性是場景對象屬性對話框的一部分，該對話框位於<span>[</span>菜單欄<span>-&gt;</span>工具<span>-&gt;</span>場景對象屬性<span>]</span>。您還可以通過雙擊場景層次結構中的對像圖標或單擊其工具欄按鈕來打開對話框：</p>
+<p><span> <img alt="" height="37" src="./../images/雲1.jpg" width="38"/></span></p>
+<p><span>[</span>場景對象屬性工具欄按鈕<span>]</span></p>
+<p>在場景對象屬性對話框中，單擊“點雲”按鈕以顯示<span>OC</span>樹對話框（“點雲”按鈕僅在最後選擇的是點雲時出現）。該對話框顯示最後選擇的點雲的設置和參數：</p>
+<p><img alt="" height="413" src="./../images/雲2.jpg" width="380"/></p>
+<p><span>[</span>點雲對話框<span>]</span></p>
+<p>不要使用<span>OC</span>樹計算。結構：默認情況下，點雲使用類似於<span>OC</span>樹的計算結構進行有效的點操作。此結構可能會減慢插入點和刪除點的速度。如果啟用此項目，則點插入將更加有效，但是點雲將不再可碰撞，不可測量或不可檢測，並且某些其他操作也可能會受到限制。您始終可以在以後的階段或通過<span>sim.setPointCloudOptions</span>切換此項目。</p>
+<p>最高體素大小：將包含點的<span>OC</span>樹體素的最大大小。大小越小，此點雲所基於的<span>OC</span>樹數據結構將使用的內存就越大。</p>
+<p>最高點數<span>/</span>體素：單個<span>OC</span>樹體素可以包含的最大點數。如果需要在此類體素中存儲更多點，它將被拆分為<span>8</span>個子體素，直到滿足約束條件為止。為了有效地進行碰撞檢測，距離計算和接近傳感器檢測，建議在單個體素中存儲大約<span>10-20</span>個點。</p>
+<p>插入選定的可見對象：允許基於選定的可見對象插入點。僅考慮虛擬對象，形狀，超頻樹和點雲。選擇要插入的所有對象，然後最後選擇目標點雲對象。形狀將事先轉換為具有指定構建分辨率的臨時<span>OC</span>樹。插入公差項允許通過指定用於確定是否插入點的最小距離公差來避免重複的點。插入公差<span>&gt; 0.0</span>時，點插入將變慢。</p>
+<p>減去選定的可見對象：允許基於選定的可見對象減去點。僅考慮虛擬變量，超頻樹和點雲。選擇要減去的所有對象，然後最後選擇目標點雲對象。假人和點雲將使用減法公差值來標識要刪除的點。</p>
+<p>清除點雲：從點雲中刪除所有點。</p>
+<p>點具有隨機顏色：每個點將具有隨機顏色。</p>
+<p>顯示<span>OC</span>樹結構：顯示底層<span>OC</span>樹數據結構，主要用於調試目的。</p>
+<p>顏色是自發光的：點將以自發光的顏色顯示。</p>
+<p>點顯示比例：包含大量點的點雲可能會減慢渲染速度。通過將比率設置為小於<span>1</span>，將為每個包含點的<span>OC</span>樹體素顯示更少的點數。這僅對顯示<span>/</span>渲染的圖像有影響。</p>
+<p>點大小：點的大小，以像素為單位。</p>
+<p>調整下一次插入的顏色：允許選擇一種新的顏色，該顏色將用於新的點插入。</p>
+<p>外部控制器教程<span>(External controller tutorial)</span></p>
+<p>在<span>CoppeliaSim</span>中，有幾種方法可以控制機器人或仿真：</p>
+<p>最方便的方法是編寫一個子腳本來處理給定機器人或模型的行為。這是最方便的方法，因為子腳本直接附加到場景對象，它們將與相關的場景對像一起復制，它們不需要使用外部工具進行任何編譯，它們可以在線程或非線程模式下運行，它們可以通過自定義<span>Lua</span>函數或<span>Lua</span>擴展庫進行擴展。使用子腳本的另一個主要優點是：與本節中提到的後<span>3</span>種方法（即使用常規<span>API</span>）一樣，沒有通信延遲，並且子腳本是應用程序主線程的一部分（固有的同步操作）。但是，編寫腳本有幾個缺點：您無法選擇編程語言，不能擁有最快的代碼，並且除了<span>Lua</span>擴展庫之外，無法直接訪問外部函數庫。</p>
+<p>可以控制機器人或模擬的另一種方法是編寫插件。插件機制允許使用回調機制，自定義<span>Lua</span>函數註冊，當然還可以訪問外部函數庫。插件通常與子腳本結合使用（例如，插件註冊自定義的<span>Lua</span>函數，當從子腳本中調用時，該<span>Lua</span>函數將回調特定的插件函數）。使用插件的主要優勢還在於，與本節中提到的後<span>3</span>種方法（即使用常規<span>API</span>）一樣，沒有通信延遲，並且插件是應用程序主線程的一部分（固有的同步操作）。插件的缺點是：它們的編程更加複雜，並且也需要使用外部編譯。另請參閱插件教程。</p>
+<p>控制機器人或模擬的第三種方法是編寫依賴於遠程<span>API</span>的外部客戶端應用程序。如果您需要從外部應用程序，機器人或另一台計算機運行控制代碼，這是一種非常便捷的方法。這也使您可以使用與運行真實機器人完全相同的代碼來控制仿真或模型（例如虛擬機器人）。遠程<span>API</span>有兩個版本：基於<span>B0</span>的遠程<span>API</span>和舊版遠程<span>API</span>。</p>
+<p><span> </span>控制機器人或仿真的第五種方法是通過<span>ROS</span>節點。<span> ROS</span>與遠程<span>API</span>相似，是使多個分佈式進程相互通信的便捷方法。儘管遠程<span>API</span>非常輕巧且快速，但它僅允許與<span>CoppeliaSim</span>通信。另一方面，<span>ROS</span>允許幾乎將任意數量的進程相互連接，並且提供了大量兼容的庫。但是，它比遠程<span>API</span>重並且更複雜。有關詳細信息，請參閱<span>ROS</span>接口。</p>
+<p>控制機器人或模擬的第六種方法是通過<span>BlueZero</span>（<span>BØ</span>）節點。與<span>ROS</span>類似，<span>BlueZero</span>是使多個分佈式進程相互通信的一種便捷方法，並且是一種輕量級的跨平台解決方案。有關詳細信息，請參考<span>BlueZero</span>界面。</p>
+<p>控制機器人或模擬的第七種方法是編寫一個外部應用程序，該應用程序通過各種方式（例如管道，套接字，串行端口等）與<span>CoppeliaSim</span>插件或<span>CoppeliaSim</span>腳本進行通信。選擇編程語言（可以是任何一種語言）和靈活性是兩個主要優點。同樣，控制代碼也可以在機器人或其他計算機上運行。但是，與使用遠程<span>API</span>的方法相比，這種控制仿真或模型的方法更加乏味。</p>
+<p>有<span>8</span>個與本教程相關的場景文件：<span> </span></p>
+<p><span>scenes / controlTypeExamples /</span>受控<span>ViaScript</span>：一個機器人是通過非線程子腳本控制的，另一個是通過線程子腳本控制的。</p>
+<p><span>scenes / controlTypeExamples /</span>受控<span>ViaPlugin</span>：機器人是通過插件控制的。</p>
+<p><span>scenes / controlTypeExamples / controlViaB0RemoteApi</span>：通過基於<span>B0</span>的遠程<span>API</span>來控制機器人。</p>
+<p><span>scenes / controlTypeExamples /</span>受控<span>ViaLegacyRemoteApi</span>：通過舊版遠程<span>API</span>控制機器人。</p>
+<p><span>scenes / controlTypeExamples / controlViaB0</span>：通過<span>BlueZero</span>界面控制機器人。</p>
+<p><span>scenes / controlTypeExamples /</span>受控<span>ViaRos</span>：通過<span>ROS</span>接口控制機器人。</p>
+<p><span>scenes / controlTypeExamples / controlViaRos2</span>：通過<span>ROS2</span>接口控制機器人。</p>
+<p><span>scenes / controlTypeExamples /</span>受控<span>ViaTcp</span>：通過<span>LuaSocket</span>和<span>TCP</span>控制機器人。</p>
+<p><span><img alt="" height="581" src="./../images/輸出.jpg" width="752"/><br/></span></p>
+<p>在所有<span>8</span>種情況下，都使用子腳本，主要是為了與外界建立鏈接（例如，啟動正確的客戶端應用程序，並將正確的對象句柄傳遞給它）。有兩種其他方法可以控制機器人，模擬或模擬器本身：使用自定義腳本或附加組件。但是，不建議將它們用於控制，而應使用在模擬未運行時處理功能。<span> </span></p>
+<p>例如，鏈接到場景控制的<span>ViaB0RemoteApi.ttt</span>中的機器人的子腳本具有以下主要任務：</p>
+<p><span> </span>使用某些對象句柄作為參數啟動控制器應用程序（<span>bubbleRobClient_b0RemoteApi</span>）。基於對象<span>B0</span>的遠程<span>API</span>的服務器功能由對象<span>b0RemoteApiServer</span>提供。</p>
+<p>作為另一個示例，鏈接到場景控制的<span>ViaRos.ttt</span>中的機器人的子腳本具有以下主要任務：</p>
+<p>檢查是否已加載<span>CoppeliaSim</span>的<span>ROS</span>接口</p>
+<p>使用某些主題名稱或對象句柄作為參數啟動控制器應用程序（<span>rosBubbleRob</span>）</p>
+<p>然而，作為另一個示例，鏈接到場景控制的<span>ViaTcp.ttt</span>中的機器人的子腳本具有以下主要任務：</p>
+<p>搜索空閒的套接字連接端口</p>
+<p>使用所選的連接端口作為參數啟動控制器應用程序（<span>bubbleRobServer</span>）</p>
+<p>本地連接到控制器應用程序</p>
+<p>在每次仿真過程中，將傳感器值發送到控制器，並從控制器讀取所需的電機值</p>
+<p>在每次模擬過程中，將所需的電機值應用於機器人的關節</p>
+<p>運行模擬，然後復制並粘貼機器人：您將看到重複的機器人將直接運行，因為附加的子腳本負責啟動各自外部應用程序的新實例，或調用適當的插件函數。</p>
+<p><em><strong>心得</strong></em></p>
+<p>CoppeliaSim 裡面有許多功能可以供我們使用，例如裡面的假人可以被用來測量與機器人的距離，可以被偵測器偵測到的，同時具有可以放在路徑上做為輔助的對象……等，在這個電子書裡讓我訝異的是他的API 不是只有Python能用而已，可以用許多程式來寫API，讓我覺得自己所學的還不太足夠應該多加努力。</p>
+<br />python 更新 << <a href='python 更新.html'>Previous</a> <a href='Assignment2.html'>Next</a> >> Assignment2</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        
