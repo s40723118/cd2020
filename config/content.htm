@@ -564,6 +564,52 @@ Using Actuators</div>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/FSWc_FGePlg" width="560"></iframe></p>
 <h2>第十週</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/vjY0mEinnVI" width="560"></iframe></p>
+<h2>第十三週</h2>
+<p>首先到 <a href="http://mde.tw/cd2020pj1/content/Ubuntu.html">http://mde.tw/cd2020pj1/content/Ubuntu.html</a> 使用 gm 帳號 下載Ubuntu20_cd2020pj1.ova  <span>Ubuntu2020_w12.ova  這兩個檔案</span></p>
+<p><img alt="" height="1080" src="/images/chrome_2020-06-07_20-34-01.png" width="1920"/></p>
+<p>到 <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a> 載virtualbox</p>
+<p><img alt="" height="1080" src="/images/2020-06-07_20-35-29.png" width="1920"/></p>
+<p>開啟<span>virtualbox 使用導入 Ubuntu20_cd2020pj1.ova  <span>Ubuntu2020_w12.ova  這兩個檔案  (附註: 這兩個檔案放在桌面)</span></span></p>
+<p><span><img alt="" height="1033" src="/images/2020-06-07_21-37-06.png" width="994"/></span></p>
+<p><span>之後 匯入硬碟磁碟機作為 VDI(I)  一定要勾</span></p>
+<p><span><img alt="" height="1030" src="/images/VirtualBox_2020-06-07_21-37-22.png" width="960"/></span></p>
+<p><span></span>進去裡面  密碼為帳號  kmol2020  (附註: Nom Lock記得開啟 進去預設為沒開)</p>
+<p><span><img alt="" height="1080" src="/images/2020-06-07_20-40-18.jpg" width="1920"/></span></p>
+<p><span>點 Activities －&gt;  LXTerminal</span></p>
+<p><span><img alt="" height="1080" src="/images/2020-06-07_20-42-09.png" width="1920"/></span></p>
+<p><span>然後使用 ifconfig  查 ip</span></p>
+<p><span>IPv4:10.0.2.4</span></p>
+<p><span>IPv6:fd17:625c:f037:2:a00:27ff:fef6:9b8a</span></p>
+<p><span><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_20-46-29.png" width="1920"/></span></p>
+<p><span>回到virtualbox 進入 喜好設定－&gt;網路－&gt; 新增NetNeteork－&gt; 網路 CIDR(C)  10.0.2.0/24</span></p>
+<p><span><img alt="" height="1030" src="/images/VirtualBox_2020-06-07_20-36-46.png" width="960"/></span></p>
+<p><span>IPv4 設定如下 (IPv6要在學校設定)</span></p>
+<p><span><img alt="" height="1030" src="/images/VirtualBox_2020-06-07_20-37-42.png" width="960"/></span></p>
+<p><span>輸入 leo  開啟 cd2020pj1.leo</span></p>
+<p><span><img alt="" height="626" src="/images/2020-06-07_20-53-18.png" width="897"/></span></p>
+<p><span></span>可以看到 需要 oauth_gm.txt</p>
+<p><span><img alt="" height="538" src="/images/2020-06-07_20-54-44.png" width="795"/></span></p>
+<p><span>用SciTE 輸入 123 123 測試用的  名稱 oauth_gm.txt</span></p>
+<p><span><img alt="" height="779" src="/images/2020-06-07_20-54-55.png" width="662"/></span></p>
+<p>放在 tmp 裡面</p>
+<p><span><img alt="" height="520" src="/images/2020-06-07_20-55-08.png" width="638"/></span></p>
+<p>cd tmp/cd2020pj1</p>
+<p>python3 wsgi.py 可得知要改ip</p>
+<p><span><img alt="" height="474" src="/images/2020-06-07_21-00-08.png" width="653"/></span></p>
+<p><span>點開cd2020pj1裡的wsgi.py   host=10.0.2.4 , port=8443</span></p>
+<p><span><img alt="" height="417" src="/images/2020-06-07_22-57-59.png" width="649"/></span></p>
+<p><span>重新輸入 python3 wsgi.py</span></p>
+<p><span><img alt="" height="178" src="/images/2020-06-07_22-58-17.png" width="737"/></span></p>
+<p><span></span>在火狐開  https://10.0.2.4:8443/</p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-23-53.png" width="1920"/></p>
+<p>點進去發現錯誤</p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-24-07.png" width="1920"/></p>
+<p>把之前在 <span>oauth_gm.txt 內容改成之前設好的 API  放進去</span></p>
+<p><img alt="" height="129" src="/images/2020-06-07_23-59-29.png" width="651"/></p>
+<p>因為個人遇到不知問題，選擇後門登入 https://10.0.2.4:8443/alogin </p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-44-08.png" width="1920"/></p>
+<p>就可以出現下面畫面</p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-44-23.png" width="1920"/></p>
 <p></p><h1>直播紀錄討論</h1>
 <h2>w2分配工作</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JXUKf0cfJcc" width="560"></iframe></p>
