@@ -565,7 +565,9 @@ Using Actuators</div>
 <h2>第十週</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/vjY0mEinnVI" width="560"></iframe></p>
 <h2>第十三週</h2>
+<h3>IPv4</h3>
 <p>首先到 <a href="http://mde.tw/cd2020pj1/content/Ubuntu.html">http://mde.tw/cd2020pj1/content/Ubuntu.html</a> 使用 gm 帳號 下載Ubuntu20_cd2020pj1.ova  <span>Ubuntu2020_w12.ova  這兩個檔案</span></p>
+<p><span>(附註參考網址<a href="https://s40723150.github.io/cd2020/content/VirtualBox.html">https://s40723150.github.io/cd2020/content/VirtualBox.html</a>)</span></p>
 <p><img alt="" height="1080" src="/images/chrome_2020-06-07_20-34-01.png" width="1920"/></p>
 <p>到 <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a> 載virtualbox</p>
 <p><img alt="" height="1080" src="/images/2020-06-07_20-35-29.png" width="1920"/></p>
@@ -600,7 +602,32 @@ Using Actuators</div>
 <p><span><img alt="" height="417" src="/images/2020-06-07_22-57-59.png" width="649"/></span></p>
 <p><span>重新輸入 python3 wsgi.py</span></p>
 <p><span><img alt="" height="178" src="/images/2020-06-07_22-58-17.png" width="737"/></span></p>
-<p><span></span></p><h1>直播紀錄討論</h1>
+<p><span></span>在火狐開  https://10.0.2.4:8443/</p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-23-53.png" width="1920"/></p>
+<p>點進去發現錯誤</p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-24-07.png" width="1920"/></p>
+<p>把之前在 <span>oauth_gm.txt 內容改成之前設好的 API  放進去  (附註 API參考網址<a href="https://s40723114.github.io/cd2020/content/Oauth%20%E8%A8%AD%E5%AE%9A.html">https://s40723114.github.io/cd2020/content/Oauth%20%E8%A8%AD%E5%AE%9A.html</a>)</span></p>
+<p><img alt="" height="129" src="/images/2020-06-07_23-59-29.png" width="651"/></p>
+<p>因為個人遇到不知問題，選擇後門登入 https://10.0.2.4:8443/alogin </p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-44-08.png" width="1920"/></p>
+<p>就可以出現下面畫面</p>
+<p><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_23-44-23.png" width="1920"/></p><h3>IPv6</h3>
+<p><span>使用 ifconfig  查 ip</span></p>
+<p><span>IPv4:10.0.2.4</span></p>
+<p><span>IPv6:fd17:625c:f037:2:a00:27ff:fef6:9b8a</span></p>
+<p><span><img alt="" height="1030" src="/images/VirtualBoxVM_2020-06-07_20-46-29.png" width="1920"/></span></p>
+<p><span>回到virtualbox 進入 喜好設定－&gt;網路－&gt; 新增NetNeteork－&gt; 網路 CIDR(C)  10.0.2.0/24</span></p>
+<p><span><img alt="" height="1030" src="/images/VirtualBox_2020-06-07_20-36-46.png" width="960"/></span></p>
+<p><span>IPv6 設定如下</span></p>
+<p><img alt="" height="1030" src="/images/VirtualBox_2020-06-09_22-59-56.png" width="960"/></p>
+<p>把 host = <span>fd17:625c:f037:2:a00:27ff:fef6:9b8a</span></p>
+<p><img alt="" height="325" src="/images/2020-06-09_23-05-43.png" width="646"/></p>
+<p>外部打 https://[::1]:18443</p>
+<p><img alt="" height="1030" src="/images/chrome_2020-06-09_23-08-01.png" width="1920"/></p>
+<p><span>https://[::1]:18443/alogin</span></p>
+<p><img alt="" height="1030" src="/images/chrome_2020-06-09_23-10-39.png" width="1920"/></p>
+<p>登入為下  即可以</p>
+<p><img alt="" height="1030" src="/images/chrome_2020-06-09_23-10-58.png" width="1920"/></p><h1>直播紀錄討論</h1>
 <h2>w2分配工作</h2>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/JXUKf0cfJcc" width="560"></iframe></p>
 <h2>w3</h2>
