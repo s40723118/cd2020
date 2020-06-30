@@ -21,9 +21,6 @@
 <v t="leo.20180902120523.9"><vh>封面投影片</vh>
 <v t="leo.20180902120523.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20200125115049.1"><vh>Project</vh>
-<v t="leo.20200125115049.2"><vh>Project 內容</vh></v>
-</v>
 <v t="leo.20200624095440.1"><vh>期末報告</vh>
 <v t="leo.20200624095440.2"><vh>w2</vh>
 <v t="leo.20200624095440.3"><vh>內容</vh></v>
@@ -31,8 +28,11 @@
 <v t="leo.20200624095440.4"><vh>w5</vh>
 <v t="leo.20200624095440.5"><vh>內容</vh></v>
 </v>
-<v t="leo.20200624095440.6"><vh>w6 7</vh>
+<v t="leo.20200624095440.6"><vh>w6</vh>
 <v t="leo.20200624095440.7"><vh>內容</vh></v>
+</v>
+<v t="leo.20200630125012.1"><vh>w7</vh>
+<v t="leo.20200630125012.2"><vh>內容</vh></v>
 </v>
 </v>
 <v t="leo.20200624092010.1"><vh>快捷鍵</vh>
@@ -68,6 +68,8 @@ Created by [林旻隆](https://s40723118.github.io/cd2020/content/index.html)
 &lt;/small&gt;
 
 [我的倉儲](https://github.com/s40723118/cd2020)
+
+&lt;marquee direction=left&gt;40723118林旻隆&lt;/marquee&gt; &lt;br /&gt; &lt;marquee loop=1000000000&gt;&lt;/marquee&gt; &lt;br /&gt;  
 
 
 </t>
@@ -318,26 +320,6 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="leo.20180902120538.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
-<t tx="leo.20200125115049.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20200125115049.2">## 2020 CD 專案
-
-* W1-W4 [Project1](http://www.coppeliarobotics.com/helpFiles/index.html)
-* W5-W8 [Project2](https://cyberbotics.com/doc/guide/index)
-* W9 期中簡報
-* W10-W13 [Project3](https://learn.onshape.com/catalog?labels=%5B%22Self-Paced%20Courses%22%5D&amp;values=%5B%22All%22%5D)
-* W14-W17 期末專案
-* W18 期末簡報
-
-
-</t>
 <t tx="leo.20200624092010.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -373,12 +355,12 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="leo.20200624095440.3"># Week18
-
+<t tx="leo.20200624095440.3"># W2
 W2由組長分配工作
 
 &lt;img src="https://s40723114.github.io/cd2020ag1/images/w2%E5%88%86%E9%85%8D%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E8%A1%A8.jpg" height="300" width="300"&gt;
-</t>
+
+[參考網址](https://www.coppeliarobotics.com/helpFiles/index.html/)</t>
 <t tx="leo.20200624095440.4">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 &lt;!-- 請注意, @others 不可以內縮 --&gt;
@@ -390,7 +372,7 @@ W2由組長分配工作
 
 						
 </t>
-<t tx="leo.20200624095440.5"># Week18
+<t tx="leo.20200624095440.5"># W5
 
 W5由組長分配工作
 
@@ -405,10 +387,22 @@ W5由組長分配工作
 
 						
 </t>
-<t tx="leo.20200624095440.7"># Week18
+<t tx="leo.20200624095440.7"># W6
 
-W6學會使用OBS
+W6學會使用OBS在youtube直播
 
-W7學會使用meet</t>
+&lt;iframe width="1263" height="480" src="https://www.youtube.com/embed/3x6I3apRF74" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20200630125012.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200630125012.2"># W7
+
+W7下載coppeliasim,</t>
 </tnodes>
 </leo_file>
