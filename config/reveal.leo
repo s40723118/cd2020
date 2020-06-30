@@ -35,18 +35,35 @@
 <v t="leo.20200630125012.2"><vh>內容</vh></v>
 </v>
 </v>
-<v t="leo.20200624092010.1"><vh>快捷鍵</vh>
-<v t="leo.20200624092010.2"><vh>投影片快捷鍵</vh></v>
+<v t="leo.20200630200325.1"><vh>VirtualBox</vh>
+<v t="leo.20200630201615.1"><vh>VirtualBox</vh>
+<v t="leo.20200630201615.2"><vh>VirtualBox</vh></v>
 </v>
-<v t="leo.20180902120523.13"><vh>各式內容引用範例</vh>
-<v t="leo.20180902120523.14"><vh>導入數學符號與方程式</vh>
-<v t="leo.20180902120523.15"><vh>LaTeX 格式方程式</vh></v>
+<v t="leo.20200630202950.1"><vh>IPv4</vh>
+<v t="leo.20200630202950.2"><vh>IPv4</vh></v>
 </v>
-<v t="leo.20180902120523.16"><vh>導入縮排程式碼</vh>
-<v t="leo.20180902120523.17"><vh>引用程式碼</vh></v>
+<v t="leo.20200630201813.1"><vh>IPv4</vh>
+<v t="leo.20200630201813.2"><vh>IPv4</vh></v>
 </v>
-<v t="leo.20180902120523.18"><vh>導入影片</vh>
-<v t="leo.20180902120523.19"><vh>iframe 導入影片</vh></v>
+<v t="leo.20200630223133.1"><vh>IPv4</vh>
+<v t="leo.20200630223133.2"><vh>IPv4</vh></v>
+</v>
+<v t="leo.20200630223638.1"><vh>IPv4</vh>
+<v t="leo.20200630223638.2"><vh>IPv4</vh></v>
+</v>
+<v t="leo.20200630224330.1"><vh>IPv6</vh>
+<v t="leo.20200630224330.2"><vh>IPv6</vh></v>
+</v>
+<v t="leo.20200630224808.1"><vh>IPv6</vh>
+<v t="leo.20200630224808.2"><vh>IPv6</vh></v>
+</v>
+<v t="leo.20200630225326.1"><vh>IPv6</vh>
+<v t="leo.20200630225326.2"><vh>IPv6</vh></v>
+</v>
+</v>
+<v t="leo.20200630225754.1"><vh>心得</vh>
+<v t="leo.20200630225754.2"><vh>VirtualBox</vh>
+<v t="leo.20200630225754.3"><vh>VirtualBox</vh></v>
 </v>
 </v>
 </v>
@@ -69,86 +86,9 @@ Created by [林旻隆](https://s40723118.github.io/cd2020/content/index.html)
 
 [我的倉儲](https://github.com/s40723118/cd2020)
 
-&lt;marquee direction=left&gt;40723118林旻隆&lt;/marquee&gt; &lt;br /&gt; &lt;marquee loop=1000000000&gt;&lt;/marquee&gt; &lt;br /&gt;  
+&lt;marquee direction=left&gt;40723118林旻隆&lt;/marquee&gt; &lt;br /&gt; &lt;marquee loop=999999999&gt;&lt;/marquee&gt; &lt;br /&gt;  
 
 
-</t>
-<t tx="leo.20180902120523.13">&lt;section&gt;
-@others
-&lt;/section&gt;
-
-</t>
-<t tx="leo.20180902120523.14">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="leo.20180902120523.15"># 數學符號與方程式
-
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
-</t>
-<t tx="leo.20180902120523.16">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="leo.20180902120523.17">## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
-```
-@language python
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
-
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
-```
-</t>
-<t tx="leo.20180902120523.18">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20180902120523.19">## 使用 iframe 導入影片
-
-### 導入影片 template
-
-&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 </t>
 <t tx="leo.20180902120523.2"></t>
 <t tx="leo.20180902120523.3">@language xml
@@ -320,25 +260,6 @@ QLineEdit#editorLabel {
 }</t>
 <t tx="leo.20180902120538.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
-<t tx="leo.20200624092010.1">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="leo.20200624092010.2"># 投影片快捷鍵
-
-* 利用箭頭上下前後換頁
-* 按 f 鍵進入全螢幕模式 (full screen)
-* 按 s 鍵可以顯示投影片筆記 (show)
-* 按 o 鍵可以切換單張或全域檢視 (overview)
-* 按 b 或 . 鍵可以切換螢幕黑屏 (black)
-* 按 Esc 可以退出全螢幕或全域檢視 (Escape)
-
-</t>
 <t tx="leo.20200624095440.1">&lt;section&gt;
 @others
 &lt;/section&gt;
@@ -403,6 +324,114 @@ W6學會使用OBS在youtube直播
 </t>
 <t tx="leo.20200630125012.2"># W7
 
-W7下載coppeliasim,</t>
+W7下載coppeliasim,學會基礎操作
+
+完成webots tutorial的翻譯</t>
+<t tx="leo.20200630200325.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+</t>
+<t tx="leo.20200630201615.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630201615.2"> ### VirtualBox
+ 
+ 下載的載點:[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+ </t>
+<t tx="leo.20200630201813.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630201813.2"> ### IPv4
+ 
+* 把IP依序輸入
+
+&lt;img src="https://s40723118.github.io/cd2020/images/VirtualBox_2020-06-07_20-37-42.png" height="500" width="500"&gt;</t>
+<t tx="leo.20200630202950.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630202950.2"> ### IPv4
+ 
+* 使用ifconfig前,先安裝net-tools,就可以查詢IP了
+
+&lt;img src="https://s40723118.github.io/cd2020/images/VirtualBoxVM_2020-06-07_20-46-29.png" height="500" width="500"&gt;</t>
+<t tx="leo.20200630223133.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630223133.2"> ### IPv4
+
+```
+cd tmp/cd2020pj1$ python3 wsgi.py
+```
+
+&lt;img src="https://s40723118.github.io/cd2020/images/2020-06-07_22-58-17.png" height="300" width="800"&gt;</t>
+<t tx="leo.20200630223638.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630223638.2"> ### IPv4
+
+* 完成如下
+
+&lt;img src="https://s40723118.github.io/cd2020/images/VirtualBoxVM_2020-06-07_23-44-23.png" height="300" width="800"&gt;</t>
+<t tx="leo.20200630224330.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630224330.2"> ### IPv4
+
+* 把IP依序輸入
+
+&lt;img src="https://s40723118.github.io/cd2020/images/VirtualBox_2020-06-09_22-59-56.png" height="500" width="500"&gt;</t>
+<t tx="leo.20200630224808.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630224808.2"> ### IPv4
+
+* 把查到的ID輸入在 host = fd17:625c:f037:2:a00:27ff:fef6:9b8a
+
+&lt;img src="https://s40723118.github.io/cd2020/images/2020-06-09_23-05-43.png" height="300" width="500"&gt;</t>
+<t tx="leo.20200630225326.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630225326.2"> ### IPv4
+
+* 在外部打[::1]:18443即可打開如下畫面
+
+&lt;img src="https://s40723118.github.io/cd2020/images/chrome_2020-06-09_23-10-58.png" height="350" width="650"&gt;</t>
+<t tx="leo.20200630225754.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+</t>
+<t tx="leo.20200630225754.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;</t>
+<t tx="leo.20200630225754.3"> ### 協同產品設計 第一組
+ 
+ 這學期學到如何團隊合作,每個人都有各自的優缺點,也有不同的積極度,我在學習虛擬主機的設定時,一直遇到問題,多虧有 簡國龍 與 組長 兩人的指導才能成功的做出來,尤其是國龍 還願意在半夜教我,如果沒有他的話,我基本上會遇到很多問題,感謝在我學習本門課一路教我的好同學</t>
 </tnodes>
 </leo_file>
